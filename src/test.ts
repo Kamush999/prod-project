@@ -1,4 +1,4 @@
-export function someFn(): string {
+export function someFn(arg: number): string {
     console.log('ajhdajdhgd')
     return ''
 }
