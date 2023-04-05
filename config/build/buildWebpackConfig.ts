@@ -9,7 +9,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     const {paths, mode, isDev} = options;
 
     return {
-        mode: mode,
+        mode,
         entry: paths.entry,
         devtool: isDev ? 'inline-source-map' : undefined,
         module: {
