@@ -1,4 +1,5 @@
 import React, {Suspense} from 'react';
+import cls from './AppRouter.module.scss'
 import {Route, Routes} from "react-router-dom";
 import {routeConfig} from "shared/config/routeConfig/routeConfig";
 import {useTranslation} from "react-i18next";
@@ -6,7 +7,7 @@ import {useTranslation} from "react-i18next";
 const AppRouter = () => {
     const { t } = useTranslation();
     return (
-            <Suspense fallback={<div>{t('Загрузка...')}</div>}>
+            <Suspense fallback={<div className={cls.AppRouter}>{t('Загрузка...')}</div>}>
                 <Routes>
                     {Object.values(routeConfig).map(({element, path}) => (
                         <Route
