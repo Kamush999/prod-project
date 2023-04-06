@@ -2,7 +2,6 @@ import {classNames} from 'shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss'
 import React from "react";
 import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-
 interface NavbarProps {
     className?: string;
 }
