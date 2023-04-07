@@ -3,11 +3,10 @@
   height: calc(100vh - var(--navbar-height));
   background: var(--secondary-color);
   position: relative;
-  transition: width 0.2s;
+  transition: width 0.3s;
 }
-
-.collapsed {
-  width: var(--sidebar-width-collapsed);
+.Sidebar:hover {
+    width: var(--sidebar-width-collapsed);
 }
 
 .switchers {
