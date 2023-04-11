@@ -1,5 +1,5 @@
-import {Button} from "widgets/Button/ui/Button";
+import { Button } from 'widgets/Button/ui/Button';
 
 export {
-    Button
-}
+    Button,
+};
