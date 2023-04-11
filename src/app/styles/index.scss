@@ -4,11 +4,11 @@
 @import "./themes/dark";
 @import "./themes/bdark";
 @import "./themes/blight";
+
 .app {
     font: var(--font-m);
     background: var(--bg-color);
     color: var(--primary-color);
-
     min-height: 100vh;
 }
 
