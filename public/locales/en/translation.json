@@ -1,9 +1,12 @@
 {
-  "Загрузка...": "Loading...",
   "О сайте": "About us",
   "Главная": "Main page",
   "Язык": "English",
   "Сайт Камушка": "Kamushek website",
   "Здрасте": "Wazzuup",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Reload page",
+  "Ошибка": "Error",
+  "САЙДБАР": "SIDEBAR"
 }
