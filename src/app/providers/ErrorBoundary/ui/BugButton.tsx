@@ -1,21 +1,23 @@
-import { Button } from 'widgets/Button';
-import React, { useEffect, useState } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, ThemeButton } from 'widgets/Button/ui/Button';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './BugButton.module.scss';
 
 interface BugButtonProps {
+    theme?: ThemeButton;
     className?: string;
 }
-
-// Компонент для тестирования отлова ошибок
+// Компонент для тестирования ErrorBoundary
 export const BugButton = (props: BugButtonProps) => {
-    const {
-        className,
-    } = props;
     const [error, setError] = useState(false);
     const { t } = useTranslation();
+    const {
+        className,
+        theme = ThemeButton.CLEAR,
+    } = props;
     const onThrow = () => setError(true);
+
     useEffect(() => {
         if (error) {
             throw new Error();
@@ -24,8 +26,8 @@ export const BugButton = (props: BugButtonProps) => {
 
     return (
         <Button
+            className={classNames(cls.BugButton, {}, [className, cls[theme]])}
             onClick={onThrow}
-            className={classNames(cls.BugButton, {}, [className])}
         >
             {t('Ошибка')}
         </Button>

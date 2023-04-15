@@ -24,7 +24,7 @@ export const Navbar = (props: NavbarProps) => {
                 </AppLink>
                 <AppLink
                     theme={AppLinkTheme.PRIMARY}
-                    to="/kamush"
+                    to="/my"
                     className={cls.kamushLink}
                 >
                     {t('Здрасте')}

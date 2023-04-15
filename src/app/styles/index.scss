@@ -1,15 +1,14 @@
 @import "reset";
-@import "./variables/global";
-@import "./themes/light";
-@import "./themes/dark";
-@import "./themes/bdark";
-@import "./themes/blight";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
 
 .app {
     font: var(--font-m);
     background: var(--bg-color);
     color: var(--primary-color);
     min-height: 100vh;
+    transition: color 0.6s, background 0.6s;
 }
 
 .content-page {

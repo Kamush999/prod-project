@@ -1,13 +1,12 @@
-import cls from './Loader.module.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
+import './Loader.scss';
 
 interface LoaderProps {
     className?: string;
 }
-export const Loader = (props: LoaderProps) => {
-    const {
-        className,
-    } = props;
-    return (
-        <span className={cls.loader} />
-    );
-};
+
+export const Loader = ({ className }: LoaderProps) => (
+    <div>
+        <span className={classNames('loader', {}, [className])} />
+    </div>
+);
