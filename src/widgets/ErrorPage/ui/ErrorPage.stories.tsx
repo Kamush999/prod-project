@@ -15,9 +15,6 @@ export default {
 
 const Template: ComponentStory<typeof ErrorPage> = (args) => <ErrorPage {...args} />;
 
-export const Light = Template.bind({});
-Light.args = {};
-
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
