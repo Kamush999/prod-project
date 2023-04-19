@@ -33,6 +33,7 @@ export const Navbar = (props: NavbarProps) => {
             >
                 {t('Войти')}
             </Button>
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <Modal isOpen={isAuthModal} onClose={onToggleModal}>
                 ASjkdhkldfhghgflja ldhfkahsgf lha dfldhglfahsjdfgjdhhgfla dhg
             </Modal>
