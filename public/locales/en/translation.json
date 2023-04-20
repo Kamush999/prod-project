@@ -21,5 +21,8 @@
   "Админ панель": "Admin panel",
   "Войти": "Log In",
   "Введите логин": "Enter login",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Вход в систему": "Log in to the system",
+  "Авторизация неудачна": "Authorization failed",
+  "Выйти": "Logout"
 }

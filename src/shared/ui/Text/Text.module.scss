@@ -1,0 +1,31 @@
+.Text {
+    margin-right: auto;
+}
+
+.text_primary {
+    .title {
+        font: var(--font-l);
+        color: var(--primary-color);
+        background: none;
+    }
+
+    .text {
+        font: var(--font-m);
+        color: var(--primary-color);
+        background: none;
+    }
+}
+
+.error_text {
+    .title {
+        font: var(--font-l);
+        color: var(--red-light);
+        background: none;
+    }
+
+    .text {
+        font: var(--font-m);
+        color: var(--red-dark);
+        background: none;
+    }
+}

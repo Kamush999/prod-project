@@ -19,7 +19,7 @@ export const Sidebar = (props: SidebarProps) => {
     const { t } = useTranslation();
     return (
         <div
-            data-testid="Sidebar"
+            data-testid="sidebar"
             className={classNames(cls.Sidebar, {}, [className])}
         >
             <div className={cls.items}>
