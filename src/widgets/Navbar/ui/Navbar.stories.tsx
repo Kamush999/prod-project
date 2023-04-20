@@ -1,7 +1,9 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import {
+    ThemeDecorator,
+} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import {
     StoreDecorator,
@@ -18,15 +20,15 @@ export default {
 
 const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
-// export const Light = Template.bind({});
-// Light.args = {};
-// Light.decorators = [ThemeDecorator(Theme.LIGHT)];
-// export const Perfect = Template.bind({});
-// Perfect.args = {};
-// Perfect.decorators = [ThemeDecorator(Theme.PERFECT)];
-// export const Dark = Template.bind({});
-// Dark.args = {};
-// Dark.decorators = [ThemeDecorator(Theme.DARK)];
+export const Light = Template.bind({});
+Light.args = {};
+Light.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({})];
+export const Perfect = Template.bind({});
+Perfect.args = {};
+Perfect.decorators = [ThemeDecorator(Theme.PERFECT), StoreDecorator({})];
+export const Dark = Template.bind({});
+Dark.args = {};
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 export const AuthNavbar = Template.bind({});
 AuthNavbar.args = {};
 AuthNavbar.decorators = [StoreDecorator({
