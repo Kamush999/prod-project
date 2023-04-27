@@ -4,7 +4,7 @@
     color: var(--primary-color);
     font-family: Consolas, Menlo, Monaco, monospace;
     font-weight: bold;
-    font-size: 100px;
+    font-size: 50px;
     opacity: 0.8;
     text-shadow: 0 0 10px #d5d2d2, 0 0 20px #d5d2d2, 0 0 30px #d5d2d2, 0 0 40px #d5d2d2;
 }
@@ -22,7 +22,7 @@
 }
 
 @keyframes pulse {
-    to {
+    0% {
         transform: scale(0.8);
         opacity: 0.5;
     }

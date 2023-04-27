@@ -18,7 +18,17 @@
     "id": 1,
     "username": "admin",
     "password": "12345"
-  }
+  },
+    {
+      "id": 2,
+      "username": "ilyapat99",
+      "password": "051299Ab"
+    },
+    {
+      "id": 3,
+      "username": "rinka",
+      "password": "230704Ab"
+    }
   ],
   "profile": {
     "name": "typicode"
