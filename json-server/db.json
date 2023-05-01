@@ -15,10 +15,10 @@
   ],
   "users": [
     {
-    "id": "1",
-    "username": "admin",
-    "password": "12345"
-  },
+      "id": "1",
+      "username": "admin",
+      "password": "12345"
+    },
     {
       "id": "2",
       "username": "kamushek",
@@ -31,14 +31,13 @@
     }
   ],
   "profile": {
-    "first": "Ринка",
+    "first": "Ринка Любовь моя",
     "lastname": "Шикима",
     "age": 18,
-    "currency": "KZT",
+    "currency": "USD",
     "country": "Kazakhstan",
     "city": "Almaty",
     "username": "rinka",
-    "avatar": "https://postimg.cc/LnLpqY7Y"
+    "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
   }
-
 }

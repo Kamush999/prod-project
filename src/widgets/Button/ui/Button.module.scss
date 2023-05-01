@@ -29,6 +29,13 @@
     background: none;
 }
 
+.outline_red {
+    border: 1px solid var(--red-light);
+    color: var(--red-dark);
+    transition: color 0.6s, border 0.6s;
+    background: none;
+}
+
 .background {
     background: var(--bg-color);
     color: var(--secondary-color);
