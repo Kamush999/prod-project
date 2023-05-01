@@ -3,19 +3,23 @@ import { MainPage } from 'pages/MainPage';
 import { AboutPage } from 'pages/AboutPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import { KamushekPage } from 'pages/KamushekPage';
+import { ProfilePage } from 'pages/ProfilePage';
 
 export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
-    NOT_FOUND = 'not_found',
     MY = 'my_page',
+    PROFILE = 'profile_page',
+    // last page not found page!!!
+    NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
     [AppRoutes.MY]: '/my',
-    // последний
+    [AppRoutes.PROFILE]: '/profile',
+    // last
     [AppRoutes.NOT_FOUND]: '*',
 };
 
@@ -32,6 +36,11 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
         path: RoutePath.my_page,
         element: <KamushekPage />,
     },
+    [AppRoutes.PROFILE]: {
+        path: RoutePath.profile_page,
+        element: <ProfilePage />,
+    },
+    // last
     [AppRoutes.NOT_FOUND]: {
         path: RoutePath.not_found,
         element: <NotFoundPage />,

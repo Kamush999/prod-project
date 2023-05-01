@@ -1,58 +1,55 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { useTranslation } from 'react-i18next';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import React from 'react';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import AboutIcon from 'shared/assets/icons/aboutPage.svg';
-import MainIcon from 'shared/assets/icons/homePage.svg';
+import React, { memo, useMemo, useState } from 'react';
+import { Button, ButtonSize, ButtonTheme } from 'widgets/Button';
+import { SidebarItemsList } from 'widgets/Sidebar/model/items';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
 }
-export const Sidebar = (props: SidebarProps) => {
-    const {
-        className,
-    } = props;
-    const { t } = useTranslation();
+export const Sidebar = memo(({ className }: SidebarProps) => {
+    const [collapsed, setCollapsed] = useState(true);
+
+    const onToggle = () => {
+        setCollapsed((prev) => !prev);
+    };
+
+    const itemsList = useMemo(() => SidebarItemsList.map((item) => (
+        <SidebarItem
+            item={item}
+            collapsed={collapsed}
+            key={item.path}
+        />
+    )), [collapsed]);
+
     return (
         <div
             data-testid="sidebar"
-            className={classNames(cls.Sidebar, {}, [className])}
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
+            <Button
+                data-testid="sidebar-toggle"
+                onClick={onToggle}
+                className={cls.collapseBtn}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
+                size={ButtonSize.L}
+                square
+            >
+                {collapsed ? '>' : '<'}
+            </Button>
             <div className={cls.items}>
-                <div className={cls.item}>
-                    <AppLink
-                        theme={AppLinkTheme.PRIMARY}
-                        to={RoutePath.main}
-                        className={cls.link}
-                    >
-                        <MainIcon className={cls.icon} />
-                        <span className={cls.text}>
-                            {t('Главная')}
-                        </span>
-                    </AppLink>
-                </div>
-                <div className={cls.item}>
-                    <AppLink
-                        theme={AppLinkTheme.PRIMARY}
-                        to={RoutePath.about}
-                        className={cls.link}
-                    >
-                        <AboutIcon className={cls.icon} />
-                        <span className={cls.text}>
-                            {t('О сайте')}
-                        </span>
-                    </AppLink>
-
-                </div>
+                {itemsList}
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher className={cls.lang} />
+                <LangSwitcher
+                    short={collapsed}
+                    className={cls.lang}
+                />
             </div>
         </div>
     );
-};
+});

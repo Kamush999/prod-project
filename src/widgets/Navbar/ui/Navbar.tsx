@@ -1,10 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ProgressBar } from 'widgets/ProgressBar';
-import { AdminPanel } from 'widgets/AdminPanel';
-import { Button } from 'widgets/Button';
-import { ThemeButton } from 'widgets/Button/ui/Button';
+import { Button, ButtonTheme } from 'widgets/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
@@ -13,7 +10,7 @@ import cls from './Navbar.module.scss';
 interface NavbarProps {
     className?: string;
 }
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = memo((props: NavbarProps) => {
     const {
         className,
     } = props;
@@ -35,12 +32,8 @@ export const Navbar = (props: NavbarProps) => {
     if (authData) {
         return (
             <div className={classNames(cls.Navbar, {}, [className])}>
-                <div className={cls.bars}>
-                    <ProgressBar />
-                    <AdminPanel />
-                </div>
                 <Button
-                    theme={ThemeButton.CLEAR}
+                    theme={ButtonTheme.CLEAR}
                     className={cls.links}
                     onClick={onLogout}
                 >
@@ -52,12 +45,8 @@ export const Navbar = (props: NavbarProps) => {
 
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            <div className={cls.bars}>
-                <ProgressBar />
-                <AdminPanel />
-            </div>
             <Button
-                theme={ThemeButton.CLEAR}
+                theme={ButtonTheme.CLEAR}
                 className={cls.links}
                 onClick={onShowModal}
             >
@@ -71,4 +60,4 @@ export const Navbar = (props: NavbarProps) => {
             )}
         </div>
     );
-};
+});

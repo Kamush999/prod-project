@@ -1,11 +1,11 @@
-import { Button, ThemeButton } from 'widgets/Button/ui/Button';
+import { Button, ButtonTheme } from 'widgets/Button/ui/Button';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './BugButton.module.scss';
 
 interface BugButtonProps {
-    theme?: ThemeButton;
+    theme?: ButtonTheme;
     className?: string;
 }
 // Компонент для тестирования ErrorBoundary
@@ -14,7 +14,7 @@ export const BugButton = (props: BugButtonProps) => {
     const { t } = useTranslation();
     const {
         className,
-        theme = ThemeButton.CLEAR,
+        theme = ButtonTheme.CLEAR,
     } = props;
     const onThrow = () => setError(true);
 

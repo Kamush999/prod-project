@@ -1,36 +1,44 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "json-server",
-      "author": "typicode"
+      "userId": "1"
     }
   ],
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "body": "some comment",
-      "postId": 1
+      "postId": "1"
     }
   ],
   "users": [
     {
-    "id": 1,
+    "id": "1",
     "username": "admin",
     "password": "12345"
   },
     {
-      "id": 2,
-      "username": "ilyapat99",
-      "password": "051299Ab"
+      "id": "2",
+      "username": "kamushek",
+      "password": "12345"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "rinka",
-      "password": "230704Ab"
+      "password": "12345"
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Ринка",
+    "lastname": "Шикима",
+    "age": 18,
+    "currency": "KZT",
+    "country": "Kazakhstan",
+    "city": "Almaty",
+    "username": "rinka",
+    "avatar": "https://postimg.cc/LnLpqY7Y"
   }
+
 }

@@ -24,5 +24,9 @@
   "Введите пароль": "Enter password",
   "Вход в систему": "Log in to the system",
   "Авторизация неудачна": "Authorization failed",
-  "Выйти": "Logout"
+  "Выйти": "Logout",
+  "Страница профиля": "Profile page",
+  "Профиль": "Profile",
+  "Короткий язык": "EN",
+  "Камушек": "Kamushek"
 }
