@@ -22,5 +22,11 @@
   "Короткий язык": "EN",
   "Камушек": "Kamushek",
   "Выберите валюту": "Select currency",
-  "Выберите страну": "Select country"
+  "Выберите страну": "Select country",
+  "Серверная ошибка при сохранении": "Server error",
+  "Некорректный вид валюты": "Incorrect type of currency",
+  "Некорректные данные пользователя": "Incorrect user data",
+  "Некорректный возраст": "Incorrect age",
+  "Некорректный регион": "Incorrect country",
+  "Данные не указаны": "Data not specified"
 }
