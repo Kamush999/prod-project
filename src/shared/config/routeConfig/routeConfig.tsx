@@ -2,7 +2,7 @@ import { RouteProps } from 'react-router-dom';
 import { MainPage } from 'pages/MainPage';
 import { AboutPage } from 'pages/AboutPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
-import { KamushekPage } from 'pages/KamushekPage';
+import { AdminPage } from 'pages/AdminPage';
 import { ProfilePage } from 'pages/ProfilePage';
 
 type AppRoutesProps = RouteProps & {
@@ -11,7 +11,7 @@ type AppRoutesProps = RouteProps & {
 export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
-    MY = 'my_page',
+    ADMIN = 'my_admin_page',
     PROFILE = 'profile_page',
     // last page not found page!!!
     NOT_FOUND = 'not_found',
@@ -20,7 +20,7 @@ export enum AppRoutes {
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
-    [AppRoutes.MY]: '/my',
+    [AppRoutes.ADMIN]: '/admin_my_admin',
     [AppRoutes.PROFILE]: '/profile',
     // last
     [AppRoutes.NOT_FOUND]: '*',
@@ -35,9 +35,9 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         path: RoutePath.about,
         element: <AboutPage />,
     },
-    [AppRoutes.MY]: {
-        path: RoutePath.my_page,
-        element: <KamushekPage />,
+    [AppRoutes.ADMIN]: {
+        path: RoutePath.my_admin_page,
+        element: <AdminPage />,
     },
     [AppRoutes.PROFILE]: {
         path: RoutePath.profile_page,

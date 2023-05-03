@@ -1,13 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const KamushekPage = () => {
+const AdminPage = () => {
     const { t } = useTranslation();
     return (
         <div>
-            {t('Сайт Камушка')}
+            {t('Панель админа')}
         </div>
     );
 };
 
-export default KamushekPage;
+export default AdminPage;

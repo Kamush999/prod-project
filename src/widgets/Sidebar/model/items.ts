@@ -28,9 +28,9 @@ export const SidebarItemsList: SidebarItemType[] = [
         authOnly: true,
     },
     {
-        path: RoutePath.my_page,
+        path: RoutePath.my_admin_page,
         Icon: ProfileIcon,
-        text: 'Камушек',
+        text: 'Админ панель',
         authOnly: true,
     },
 ];

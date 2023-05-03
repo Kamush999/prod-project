@@ -28,5 +28,6 @@
   "Некорректные данные пользователя": "Incorrect user data",
   "Некорректный возраст": "Incorrect age",
   "Некорректный регион": "Incorrect country",
-  "Данные не указаны": "Data not specified"
+  "Данные не указаны": "Data not specified",
+  "Панель админа": "Admin panel"
 }
