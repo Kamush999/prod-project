@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof MainPage> = (args) => <MainPage />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
-
+Normal.decorators = [ThemeDecorator(Theme.LIGHT)];
 export const Perfect = Template.bind({});
 Perfect.args = {};
 Perfect.decorators = [ThemeDecorator(Theme.PERFECT)];

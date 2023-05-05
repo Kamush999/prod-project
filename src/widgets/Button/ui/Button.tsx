@@ -11,6 +11,7 @@ export enum ButtonTheme {
     OUTLINE_RED = 'outline_red',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted',
+    GRADIENT = 'gradientButton',
 }
 export enum ButtonSize {
     M = 'size_m',

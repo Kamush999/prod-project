@@ -6,14 +6,14 @@
 
 body {
     font: var(--font-m);
-    color: var(--primary-color);
+    color: var(--text-color);
     transition: color 0.6s, background 0.6s;
 }
 
 .app,
 .app_modal {
     font: var(--font-m);
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .app {
