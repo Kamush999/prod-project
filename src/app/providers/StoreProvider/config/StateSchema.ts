@@ -7,17 +7,21 @@ import {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { Dispatch, CombinedState } from 'redux';
+import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 import { ProfileSchema } from 'entities/Profile';
 import { To } from 'history';
 import { NavigateOptions } from 'react-router-dom';
+import { ArticleDetailsSchema } from 'entities/Article';
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
+    articleDetails?: ArticleDetailsSchema;
+    articleDetailsComments?: ArticleDetailsCommentsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
