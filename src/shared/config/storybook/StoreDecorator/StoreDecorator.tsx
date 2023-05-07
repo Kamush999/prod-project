@@ -8,11 +8,19 @@ import {
 import {
     articleDetailsReducer,
 } from 'entities/Article/model/slice/articleDetailsSlice';
+import {
+    addNewCommentReducer,
+} from 'features/addNewComment/model/slices/addNewCommentSlice';
+import {
+    articleDetailsCommentsReducer,
+} from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
+    addNewComments: addNewCommentReducer,
+    articleDetailsComments: articleDetailsCommentsReducer,
 };
 
 export const StoreDecorator = (

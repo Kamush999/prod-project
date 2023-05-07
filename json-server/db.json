@@ -14,7 +14,9 @@
       "img": "https://www.shutterstock.com/image-vector/web-development-sign-javascript-vector-600w-1875934654.jpg",
       "views": 1022,
       "createdAt": "22.02.2023",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -82,19 +84,49 @@
       "id": "1",
       "text": "some comment",
       "articleId": "1",
-      "userId": "3"
+      "userId": "2"
     },
-  {
+    {
       "id": "2",
       "text": "some comment2",
       "articleId": "1",
-      "userId": "3"
+      "userId": "2"
     },
-  {
+    {
       "id": "3",
       "text": "some comment3",
       "articleId": "1",
-      "userId": "3"
+      "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asddds",
+      "id": "JETAfxX"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asddds",
+      "id": "Sgz4JBF"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Люблю Админа",
+      "id": "JgTRcqf"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "а ты любишь?",
+      "id": "5oy4xdu"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "add",
+      "id": "KoIe-hf"
     }
   ],
   "users": [
@@ -102,30 +134,39 @@
       "id": "1",
       "username": "admin",
       "password": "12345",
-      "role": "OWNER"
+      "role": "OWNER",
+      "avatar": "https://www.shutterstock.com/image-vector/horned-demon-head-vector-illustration-600w-2165765835.jpg"
     },
     {
       "id": "2",
-      "username": "kamushek",
-      "password": "12345",
-      "role": "ADMIN"
-    },
-    {
-      "id": "3",
       "username": "rinka",
       "password": "12345",
       "role": "ADMIN",
       "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
     }
   ],
-  "profile": {
-    "first": "Ринка",
-    "lastname": "Шикима",
-    "age": 18,
-    "currency": "KZT",
-    "country": "Kazakhstan",
-    "city": "Almaty",
-    "username": "rinka",
-    "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Админ",
+      "lastname": "Админыч",
+      "age": 666,
+      "currency": "KZT",
+      "country": "Kazakhstan",
+      "city": "Подвал твоей мамы",
+      "username": "admin",
+      "avatar": "https://www.shutterstock.com/image-vector/horned-demon-head-vector-illustration-600w-2165765835.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Ринка",
+      "lastname": "Шикима",
+      "age": 18,
+      "currency": "KZT",
+      "country": "Kazakhstan",
+      "city": "Kyoto",
+      "username": "rinka",
+      "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
+    }
+  ]
 }

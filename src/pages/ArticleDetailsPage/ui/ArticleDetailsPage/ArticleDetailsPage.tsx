@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { ArticleDetails } from 'entities/Article';
 import { useParams } from 'react-router-dom';
 import { Text } from 'shared/ui/Text/Text';
@@ -12,12 +12,15 @@ import { useSelector } from 'react-redux';
 import {
     useInitialEffect,
 } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { AddNewComment } from 'features/addNewComment';
+import {
+    addCommentForArticle,
+} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import {
     fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import {
-    getArticleCommentsError,
     getArticleCommentsIsLoading,
 } from '../../model/selectors/comments';
 import {
@@ -40,6 +43,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const dispatch = useAppDispatch();
     const comments = useSelector(getArticleComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
+    const onSendComment = useCallback((text: string) => {
+        dispatch(addCommentForArticle(text));
+    }, [dispatch]);
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
     });
@@ -58,6 +64,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     className={cls.commentTitle}
                     title={t('Комментарии')}
                 />
+                <AddNewComment onSendComment={onSendComment} />
                 <CommentList
                     isLoading={commentsIsLoading}
                     comments={comments}
