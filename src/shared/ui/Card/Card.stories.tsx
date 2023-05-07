@@ -4,20 +4,23 @@ import {
     ThemeDecorator,
 } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { AddNewComment } from './AddNewComment';
+import { Text } from 'shared/ui/Text/Text';
+import { Card } from './Card';
 
 export default {
-    title: '',
-    component: AddNewComment,
+    title: 'shared/Card',
+    component: Card,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof AddNewComment>;
+} as ComponentMeta<typeof Card>;
 
-const Template: ComponentStory<typeof AddNewComment> = (args) => <AddNewComment {...args} />;
+const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+    children: <Text title="test" text="test text" />,
+};
 Normal.decorators = [ThemeDecorator(Theme.LIGHT)];
 export const Perfect = Template.bind({});
 Perfect.args = {};

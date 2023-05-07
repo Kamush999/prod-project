@@ -14,6 +14,7 @@
       "img": "https://www.shutterstock.com/image-vector/web-development-sign-javascript-vector-600w-1875934654.jpg",
       "views": 1022,
       "createdAt": "22.02.2023",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -127,6 +128,12 @@
       "userId": "2",
       "text": "add",
       "id": "KoIe-hf"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "jhhjn",
+      "id": "3oeFR77"
     }
   ],
   "users": [
