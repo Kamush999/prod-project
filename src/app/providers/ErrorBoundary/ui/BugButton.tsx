@@ -1,7 +1,7 @@
-import { Button, ButtonTheme } from 'widgets/Button/ui/Button';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './BugButton.module.scss';
 
 interface BugButtonProps {

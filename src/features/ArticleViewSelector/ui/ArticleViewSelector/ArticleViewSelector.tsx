@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { ArticleView } from 'entities/Article';
 import BigIcon from 'shared/assets/icons/line_articles.svg';
 import SmallIcon from 'shared/assets/icons/tiles_articles.svg';
-import { Button, ButtonTheme } from 'widgets/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
 import cls from './ArticleViewSelector.module.scss';
 

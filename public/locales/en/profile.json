@@ -5,12 +5,14 @@
   "Ваша фамилия": "Your lastname",
   "Ваш возраст": "Your age",
   "Ваша страна": "Your country",
+  "Выберите страну": "Select country",
   "Ваш город": "Your city",
   "Ваша валюта": "Your currency",
+  "Выберите валюту": "Select currency",
   "Произошла ошибка при загрузке профиля": "An error occurred while loading the profile",
   "Попробуйте обновить страницу": "Try refreshing the page",
   "Отменить": "Cancel",
   "Сохранить": "Save",
-  "Ссылка на аватар": "Avatar link",
+  "Ссылка на аватар": "Link to avatar",
   "Имя пользователя": "Username"
 }

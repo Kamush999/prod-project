@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button } from 'widgets/Button/ui/Button';
+import { Button } from 'shared/ui/Button/Button';
 import cls from './ErrorPage.module.scss';
 
 interface ErrorPageProps {
@@ -8,7 +8,7 @@ interface ErrorPageProps {
 }
 
 export const ErrorPage = ({ className }: ErrorPageProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('error-page');
 
     const reloadPage = () => {
         // eslint-disable-next-line no-restricted-globals

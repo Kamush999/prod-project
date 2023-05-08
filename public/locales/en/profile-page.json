@@ -1,0 +1,8 @@
+{
+  "Серверная ошибка при сохранении": "Server error on save",
+  "Некорректный вид валюты": "Incorrect type of currency",
+  "Некорректные данные пользователя": "Incorrect user data",
+  "Некорректный возраст": "Incorrect age",
+  "Некорректный регион": "Incorrect country",
+  "Данные не указаны": "Data not specified"
+}

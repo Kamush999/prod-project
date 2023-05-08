@@ -25,7 +25,7 @@ import {
     useInitialEffect,
 } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -35,7 +35,7 @@ interface ProfilePageProps {
     className?: string;
 }
 const ProfilePage = (props: ProfilePageProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('profile-page');
     const {
         className,
     } = props;

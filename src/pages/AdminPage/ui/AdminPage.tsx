@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 
 const AdminPage = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('admin-page');
     return (
         <Page>
             {t('Панель админа')}

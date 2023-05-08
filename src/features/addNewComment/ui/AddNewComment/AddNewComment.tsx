@@ -2,12 +2,12 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { Input } from 'shared/ui/Input/Input';
-import { Button, ButtonTheme } from 'widgets/Button';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader, ReducersList,
 } from 'shared/lib/components/DynamicsModuleLoader/DynamicModuleLoader';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import {
     addNewCommentActions, addNewCommentReducer,
 } from '../../model/slices/addNewCommentSlice';
@@ -23,7 +23,7 @@ export interface AddNewCommentProps {
 }
 
 const AddNewComment = memo((props: AddNewCommentProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('article-details');
     const {
         className,
         onSendComment,
