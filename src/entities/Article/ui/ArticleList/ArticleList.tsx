@@ -14,7 +14,7 @@ interface ArticleListProps {
     isLoading?: boolean;
     view?: ArticleView;
 }
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 10 : 3)
     .fill(0)
     .map((item, index) => (
         <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
