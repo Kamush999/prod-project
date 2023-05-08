@@ -20,6 +20,7 @@ import {
 } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import { Button, ButtonTheme } from 'widgets/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 import {
     fetchCommentsByArticleId,
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -57,14 +58,14 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     });
     if (!id) {
         return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 {t('Статья не найдена')}
-            </div>
+            </Page>
         );
     }
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button theme={ButtonTheme.CLEAR} onClick={onBackToList}>
                     {t('Назад к списку')}
                 </Button>
@@ -78,7 +79,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
