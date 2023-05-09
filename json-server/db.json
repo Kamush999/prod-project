@@ -9,11 +9,11 @@
   "articles": [
     {
       "id": "1",
-      "title": "Javascript news",
+      "title": "Javascript новости 2022",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://www.shutterstock.com/image-vector/web-development-sign-javascript-vector-600w-1875934654.jpg",
-      "views": 1022,
-      "createdAt": "22.02.2023",
+      "views": 1234,
+      "createdAt": "05.02.2019",
       "userId": "1",
       "type": [
         "IT"
@@ -83,9 +83,9 @@
       "id": "2",
       "title": "Безопасная разработка на Python",
       "subtitle": "Часть 1",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1477,
-      "createdAt": "24.02.2023",
+      "img": "https://i.pinimg.com/564x/ed/66/63/ed666327dd3ce274d94f2b3547155891.jpg",
+      "views": 7477,
+      "createdAt": "07.02.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -179,11 +179,11 @@
     },
     {
       "id": "3",
-      "title": "Kotlin news",
+      "title": "Разработка на Kotlin",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://i.pinimg.com/564x/ac/0b/71/ac0b718d995deda3e1e4ee893501324d.jpg",
+      "views": 1122,
+      "createdAt": "29.03.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -203,11 +203,11 @@
     },
     {
       "id": "4",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Дышим Python",
+      "subtitle": "Что нового в Python за 2022 год?",
+      "img": "https://i.pinimg.com/564x/c8/eb/64/c8eb642e2754b14dfac2a5276ba4495f.jpg",
+      "views": 144,
+      "createdAt": "26.04.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -227,11 +227,11 @@
     },
     {
       "id": "5",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Kotlin & Android",
+      "subtitle": "Что нового покажут ведроиды в 2022?",
+      "img": "https://i.pinimg.com/564x/23/8b/84/238b84f6ecaf5b91a06b3915fa1c4fb6.jpg",
+      "views": 6442,
+      "createdAt": "27.04.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -251,11 +251,11 @@
     },
     {
       "id": "6",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Angular рулит!",
+      "subtitle": "Разработка на Angular",
+      "img": "https://i.pinimg.com/564x/10/11/c6/1011c6f3ffcdfa8c2f3f57a78d35fe1f.jpg",
+      "views": 2507,
+      "createdAt": "26.05.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -275,11 +275,11 @@
     },
     {
       "id": "7",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Typescript, это вообще что?",
+      "subtitle": "Что нового в TS за 2222 год?",
+      "img": "https://i.pinimg.com/564x/66/d5/23/66d5238900aab3d7b86dc5e53a77c817.jpg",
+      "views": 1352,
+      "createdAt": "26.06.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -299,11 +299,11 @@
     },
     {
       "id": "8",
-      "title": "Python news",
+      "title": "Python без новостей",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://i.pinimg.com/564x/01/ff/75/01ff7538e96c2b9f559d274728ee51e9.jpg",
+      "views": 2342,
+      "createdAt": "02.07.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -323,11 +323,11 @@
     },
     {
       "id": "9",
-      "title": "Kotlin news",
+      "title": "Kotlin загибается как запад",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://i.pinimg.com/564x/88/84/bd/8884bd0f2adfa3e54c0fd2116a883f82.jpg",
+      "views": 1543,
+      "createdAt": "03.07.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -347,11 +347,11 @@
     },
     {
       "id": "10",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Без Python не осталось серверов.",
+      "subtitle": "Что нового в python за 2022 год?",
+      "img": "https://i.pinimg.com/564x/d1/12/1f/d1121f683ab1649d896d48e62770789a.jpg",
+      "views": 3766,
+      "createdAt": "04.07.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -371,11 +371,11 @@
     },
     {
       "id": "11",
-      "title": "Kotlin news",
+      "title": "Kotlin будет поглощен.",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://i.pinimg.com/564x/fd/72/af/fd72afa4909ddf1cfdfbcebe32c01de8.jpg",
+      "views": 8783,
+      "createdAt": "07.07.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -395,14 +395,15 @@
     },
     {
       "id": "12",
-      "title": "Python news",
+      "title": "Python захватил весь BackEnd.",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://i.pinimg.com/736x/21/ea/3d/21ea3dfa1f5e723eb92d15647fccd02c.jpg",
+      "views": 3465,
+      "createdAt": "08.07.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -419,11 +420,11 @@
     },
     {
       "id": "13",
-      "title": "Kotlin news",
+      "title": "Kotlin остался в прошлом.",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://i.pinimg.com/564x/8a/6b/26/8a6b268403311fe47067f542da1665e5.jpg",
+      "views": 2342,
+      "createdAt": "09.07.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -443,14 +444,14 @@
     },
     {
       "id": "14",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Fuck society",
+      "subtitle": "I'm a robot?",
+      "img": "https://i.pinimg.com/564x/69/9f/b0/699fb0f204c73c66c86ed598570cc053.jpg",
+      "views": 1010,
+      "createdAt": "10.07.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -467,14 +468,15 @@
     },
     {
       "id": "15",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Аниме захватывает мир!",
+      "subtitle": "Что нового в японском аниме?",
+      "img": "https://i.pinimg.com/736x/a0/0f/27/a00f27b9b70ff9bbf54d13f582b9b8c4.jpg",
+      "views": 112572,
+      "createdAt": "16.12.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS",
+        "HUMOR"
       ],
       "blocks": [
         {
@@ -491,14 +493,14 @@
     },
     {
       "id": "16",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://www.shutterstock.com/image-vector/vector-illustration-icon-python-programming-600w-1397241389.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Наруто покидает Саске",
+      "subtitle": "Трагедия всех фанатов Наруто?",
+      "img": "https://i.pinimg.com/564x/43/b4/d6/43b4d63e86fc36571dc388d67de61d73.jpg",
+      "views": 90439,
+      "createdAt": "18.01.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "HUMOR"
       ],
       "blocks": [
         {
@@ -515,14 +517,15 @@
     },
     {
       "id": "17",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Рюк. Любить.",
+      "subtitle": "Рюк лучший бог смерти, хочу такого же",
+      "img": "https://i.pinimg.com/564x/c8/7d/58/c87d5834d53ac27e0844347ce3c72572.jpg",
+      "views": 373,
+      "createdAt": "09.11.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "IT",
+        "HUMOR"
       ],
       "blocks": [
         {
@@ -565,8 +568,8 @@
     },
     {
       "articleId": "1",
-      "userId": "1",
-      "text": "asddds",
+      "userId": "3",
+      "text": "Админ лучший",
       "id": "Sgz4JBF"
     },
     {
@@ -589,7 +592,7 @@
     },
     {
       "articleId": "1",
-      "userId": "1",
+      "userId": "3",
       "text": "jhhjn",
       "id": "3oeFR77"
     },
@@ -598,6 +601,12 @@
       "userId": "1",
       "text": "РАБОТАЕТ!!!!1!!",
       "id": "1Nueu7s"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "ppp",
+      "id": "VAb5nhy"
     }
   ],
   "users": [
@@ -606,7 +615,7 @@
       "username": "admin",
       "password": "12345",
       "role": "OWNER",
-      "avatar": "https://www.shutterstock.com/image-vector/horned-demon-head-vector-illustration-600w-2165765835.jpg"
+      "avatar": "https://i.pinimg.com/736x/db/6f/0e/db6f0ef17e4e91005cb6e31581419d1e.jpg"
     },
     {
       "id": "2",
@@ -614,6 +623,13 @@
       "password": "12345",
       "role": "ADMIN",
       "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
+    },
+    {
+      "id": "3",
+      "username": "alexpat",
+      "password": "12345",
+      "role": "USER",
+      "avatar": "https://i.pinimg.com/564x/87/69/bd/8769bdc37e86759908b5a50b86fa5929.jpg"
     }
   ],
   "profile": [
@@ -624,9 +640,9 @@
       "age": 666,
       "currency": "KZT",
       "country": "Kazakhstan",
-      "city": "Подвал твоей мамы",
+      "city": "fuck society",
       "username": "admin",
-      "avatar": "https://www.shutterstock.com/image-vector/horned-demon-head-vector-illustration-600w-2165765835.jpg"
+      "avatar": "https://i.pinimg.com/736x/db/6f/0e/db6f0ef17e4e91005cb6e31581419d1e.jpg"
     },
     {
       "id": "2",
@@ -635,9 +651,20 @@
       "age": 18,
       "currency": "KZT",
       "country": "Kazakhstan",
-      "city": "Kyoto",
+      "city": "Almaty",
       "username": "rinka",
       "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
+    },
+    {
+      "id": "3",
+      "first": "Alex",
+      "lastname": "Wizard",
+      "age": 45,
+      "currency": "KZT",
+      "country": "Kazakhstan",
+      "city": "Almaty",
+      "username": "alexpat",
+      "avatar": "https://i.pinimg.com/564x/87/69/bd/8769bdc37e86759908b5a50b86fa5929.jpg"
     }
   ]
 }

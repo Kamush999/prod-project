@@ -42,18 +42,7 @@
 .SMALL {
     width: 230px;
     transition: 0.2s;
-
-    .imageWrapper {
-        width: 205px;
-        height: 205px;
-        position: relative;
-    }
-
-    .img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-    }
+    cursor: pointer;
 
     .date {
         position: absolute;
@@ -65,28 +54,41 @@
     &:hover {
         opacity: 0.8;
         transform: scale(1.01);
-        cursor: pointer;
 
         .date {
             display: block;
         }
     }
 
+    .imageWrapper {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .infoWrapper {
         display: flex;
         align-items: center;
         margin-top: 8px;
+        width: 200px;
     }
 
     .types p {
-        width: 115px;
+        width: 70px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
     .views {
-        margin-left: auto;
+        width: 110px;
+        margin-right: auto;
     }
 
     .title {

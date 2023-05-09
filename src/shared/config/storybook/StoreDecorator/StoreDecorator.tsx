@@ -12,15 +12,15 @@ import {
     addNewCommentReducer,
 } from 'features/addNewComment/model/slices/addNewCommentSlice';
 import {
-    articleDetailsCommentsReducer,
-} from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
+    articleDetailsPageReducer,
+} from 'pages/ArticleDetailsPage/model/slices';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addNewComments: addNewCommentReducer,
-    articleDetailsComments: articleDetailsCommentsReducer,
+    articleDetailsPage: articleDetailsPageReducer,
 };
 
 export const StoreDecorator = (
