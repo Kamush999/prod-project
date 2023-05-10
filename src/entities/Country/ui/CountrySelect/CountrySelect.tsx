@@ -25,7 +25,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
         { value: Country.BELARUS, content: Country.BELARUS },
         { value: Country.RUSSIA, content: Country.RUSSIA },
         { value: Country.KAZAKHSTAN, content: Country.KAZAKHSTAN },
-        { value: Country.UKRAINE, content: Country.UKRAINE },
+        { value: Country.GEORGIA, content: Country.GEORGIA },
     ];
     return (
         <Select

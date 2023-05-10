@@ -43,16 +43,11 @@ import {
     addCommentForArticle,
 } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import {
-
-    RoutePath,
-} from 'shared/config/routeConfig/routeConfig';
-import {
     Page,
 } from 'widgets/Page/Page';
 import {
-    Button,
-    ButtonTheme,
-} from 'shared/ui/Button/Button';
+    ArticleDetailsPageHeader,
+} from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import {
     articleDetailsPageReducer,
 } from '../../model/slices';
@@ -89,7 +84,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     } = props;
     const { id } = useParams<{id: string}>();
     const dispatch = useAppDispatch();
-    const navigate = useNavigate();
     const comments = useSelector(getArticleComments.selectAll);
     const recommendations = useSelector(getArticleRecommendations.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
@@ -97,9 +91,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
+
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
         dispatch(fetchArticleRecommendations());
@@ -114,9 +106,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button theme={ButtonTheme.CLEAR} onClick={onBackToList}>
-                    {t('Назад к списку')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     size={TextSize.L}
