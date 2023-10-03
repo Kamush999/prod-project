@@ -54,20 +54,10 @@ const DiaryPage = (props: DiaryPageProps) => {
             {/* eslint-disable-next-line i18next/no-literal-string */}
             <h1 className={classNames(cls.h1n, {}, [className])}>Школьный дневник</h1>
             <div>
-                <input
-                    className={classNames(cls.input, {}, [className])}
-                    type="text"
-                    placeholder="Название предмета"
-                    value={subjectName}
-                    onChange={(e) => setSubjectName(e.target.value)}
-                />
-                <input
-                    className={classNames(cls.input, {}, [className])}
-                    type="text"
-                    placeholder="Оценка"
-                    value={subjectGrade}
-                    onChange={(e) => setSubjectGrade(e.target.value)}
-                />
+                {/* eslint-disable-next-line i18next/no-literal-string,max-len */}
+                <input className={classNames(cls.input, {}, [className])} type="text" placeholder="Название предмета" value={subjectName} onChange={(e) => setSubjectName(e.target.value)} />
+                {/* eslint-disable-next-line i18next/no-literal-string,max-len */}
+                <input className={classNames(cls.input, {}, [className])} type="text" placeholder="Оценка" value={subjectGrade} onChange={(e) => setSubjectGrade(e.target.value)} />
                 {/* eslint-disable-next-line i18next/no-literal-string,react/button-has-type,max-len */}
                 <button className={classNames(cls.button, {}, [className])} onClick={addSubject}>Добавить предмет</button>
             </div>
