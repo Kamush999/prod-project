@@ -1,16 +1,15 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from 'entities/User';
 import { getArticleDetailsData } from 'entities/Article';
+import { getRouteArticleEdit, getRouteArticles } from 'shared/const/router';
+import { HStack } from 'shared/ui/Stack';
 import {
     getCanEditArticle,
-} from 'pages/ArticleDetailsPage/model/selectors/article';
-import cls from './ArticleDetailsPageHeader.module.scss';
+} from '../../model/selectors/article';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;
@@ -26,28 +25,31 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
     const article = useSelector(getArticleDetailsData);
 
     const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
+        navigate(getRouteArticles());
     }, [navigate]);
 
     const onEditArticle = useCallback(() => {
-        navigate(`${RoutePath.article_details}${article?.id}/edit`);
-    }, [article?.id, navigate]);
+        if (article) {
+            navigate(getRouteArticleEdit(article.id));
+        }
+    }, [article, navigate]);
     return (
-        <div
-            className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}
+        <HStack
+            max
+            justify="between"
+            className={classNames('', {}, [className])}
         >
             <Button theme={ButtonTheme.CLEAR} onClick={onBackToList}>
                 {t('Назад к списку')}
             </Button>
             { canEdit && (
                 <Button
-                    className={cls.editBtn}
                     theme={ButtonTheme.CLEAR}
                     onClick={onEditArticle}
                 >
                     {t('Редактировать')}
                 </Button>
             )}
-        </div>
+        </HStack>
     );
 });

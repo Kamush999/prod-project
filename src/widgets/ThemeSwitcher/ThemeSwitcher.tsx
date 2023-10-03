@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import React from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
 import ThemeButton from 'shared/assets/icons/themeSwitcher.svg';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from '../../shared/ui/Button/Button';
 import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {

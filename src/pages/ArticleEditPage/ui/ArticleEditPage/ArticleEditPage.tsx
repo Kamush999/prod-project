@@ -1,28 +1,27 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
 import { Page } from 'widgets/Page/Page';
 import { useParams } from 'react-router-dom';
+import { Text } from 'shared/ui/Text/Text';
+import { ArticleEdit } from 'entities/Article';
+import cls from './ArticleEditPage.module.scss';
 
 interface ArticleEditPageProps {
-    className?: string;
+    className?: string
 }
 
-const ArticleEditPage = memo((props: ArticleEditPageProps) => {
-    const { t } = useTranslation('article-details');
-    const {
-        className,
-    } = props;
+const ArticleEditPage = (props: ArticleEditPageProps) => {
+    const { className } = props;
     const { id } = useParams<{ id: string }>();
-    const isEdit = Boolean(id);
+    const cn = classNames(cls.ArticleEditPage, {}, [className]);
 
+    console.log(id, 'ArticleEditPage');
     return (
-        <Page className={classNames('', {}, [className])}>
-            {isEdit
-                ? t('Редактирование статьи')
-                : t('Создание новой статьи')}
+        <Page className={cn}>
+            {/* TODO add editor widget */}
+            {/* eslint-disable-next-line i18next/no-literal-string */}
+            {!id ? <Text text="New article" /> : <ArticleEdit /> }
         </Page>
     );
-});
+};
 
 export default ArticleEditPage;

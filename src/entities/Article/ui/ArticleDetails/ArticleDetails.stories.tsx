@@ -2,8 +2,11 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import {
+    ArticleBlockTypes,
+    ArticleTypes,
+} from '../../model/consts/consts';
+import { Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
@@ -23,7 +26,7 @@ const article: Article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
-    type: [ArticleType.IT],
+    type: [ArticleTypes.IT],
     user: {
         id: '1',
         username: 'admin',
@@ -31,7 +34,7 @@ const article: Article = {
     blocks: [
         {
             id: '1',
-            type: ArticleBlockType.TEXT,
+            type: ArticleBlockTypes.TEXT,
             title: 'Заголовок этого блока',
             paragraphs: [
                 'Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',
@@ -41,12 +44,12 @@ const article: Article = {
         },
         {
             id: '4',
-            type: ArticleBlockType.CODE,
+            type: ArticleBlockTypes.CODE,
             code: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;',
         },
         {
             id: '5',
-            type: ArticleBlockType.TEXT,
+            type: ArticleBlockTypes.TEXT,
             title: 'Заголовок этого блока',
             paragraphs: [
                 'Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',

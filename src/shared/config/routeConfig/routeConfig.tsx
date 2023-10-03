@@ -7,77 +7,67 @@ import { ProfilePage } from 'pages/ProfilePage';
 import { ArticlesPage } from 'pages/ArticlesPage';
 import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
 import { ArticleEditPage } from 'pages/ArticleEditPage';
+import {
+    AppRoutes,
+    getRouteAbout,
+    getRouteAdminPanel,
+    getRouteArticleDetail, getRouteArticleEdit,
+    getRouteArticleNew,
+    getRouteArticles, getRouteDiary,
+    getRouteMain, getRouteNotFound,
+    getRouteProfile,
+} from 'shared/const/router';
+import { DiaryPage } from 'pages/DiaryPage';
 
 export type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
 }
-export enum AppRoutes {
-    MAIN = 'main',
-    ABOUT = 'about',
-    ADMIN = 'my_admin',
-    PROFILE = 'profile',
-    ARTICLES = 'articles',
-    ARTICLE_DETAILS = 'article_details',
-    ARTICLE_CREATE = 'article_create',
-    ARTICLE_EDIT = 'article_edit',
-    // last page not found page!!!
-    NOT_FOUND = 'not_found',
-}
-
-export const RoutePath: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: '/',
-    [AppRoutes.ABOUT]: '/about',
-    [AppRoutes.ADMIN]: '/admin_my_admin',
-    [AppRoutes.PROFILE]: '/profile/',
-    [AppRoutes.ARTICLES]: '/articles',
-    [AppRoutes.ARTICLE_DETAILS]: '/articles/', // + id
-    [AppRoutes.ARTICLE_CREATE]: '/articles/new',
-    [AppRoutes.ARTICLE_EDIT]: '/articles/:id/edit',
-    // last
-    [AppRoutes.NOT_FOUND]: '*',
-};
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
-        path: RoutePath.main,
+        path: getRouteMain(),
         element: <MainPage />,
     },
     [AppRoutes.ABOUT]: {
-        path: RoutePath.about,
+        path: getRouteAbout(),
         element: <AboutPage />,
     },
     [AppRoutes.ADMIN]: {
-        path: RoutePath.my_admin,
+        path: getRouteAdminPanel(),
         element: <AdminPage />,
     },
     [AppRoutes.PROFILE]: {
-        path: `${RoutePath.profile}:id`,
+        path: getRouteProfile(':id'),
         element: <ProfilePage />,
         authOnly: true,
     },
     [AppRoutes.ARTICLES]: {
-        path: RoutePath.articles,
+        path: getRouteArticles(),
         element: <ArticlesPage />,
         authOnly: true,
     },
     [AppRoutes.ARTICLE_DETAILS]: {
-        path: `${RoutePath.article_details}:id`,
+        path: getRouteArticleDetail(':id'),
         element: <ArticleDetailsPage />,
         authOnly: true,
     },
     [AppRoutes.ARTICLE_CREATE]: {
-        path: RoutePath.article_create,
+        path: getRouteArticleNew(),
         element: <ArticleEditPage />,
         authOnly: true,
     },
     [AppRoutes.ARTICLE_EDIT]: {
-        path: RoutePath.article_edit,
+        path: getRouteArticleEdit(':id'),
         element: <ArticleEditPage />,
         authOnly: true,
     },
+    [AppRoutes.DIARY]: {
+        path: getRouteDiary(),
+        element: <DiaryPage />,
+    },
     // last
     [AppRoutes.NOT_FOUND]: {
-        path: RoutePath.not_found,
+        path: getRouteNotFound(),
         element: <NotFoundPage />,
     },
 };

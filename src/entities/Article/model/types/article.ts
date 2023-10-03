@@ -1,54 +1,44 @@
 import { User } from 'entities/User';
+import {
+    ArticleBlockTypes,
+    ArticleSortField,
+    ArticleTypes,
+    ArticleView,
+} from '../consts/consts';
 
-export enum ArticleSortField {
-    VIEWS = 'views',
-    TITLE = 'title',
-    CREATED = 'createdAt',
-}
+export type ArticleTypesType = typeof ArticleTypes[keyof typeof ArticleTypes]
+export type ArticleBlockTypesType = typeof ArticleBlockTypes[keyof typeof ArticleBlockTypes]
+export type ArticleViewTypes = typeof ArticleView[keyof typeof ArticleView]
+export type ArticleSortFieldTypes = typeof ArticleSortField[keyof typeof ArticleSortField]
 
-export enum ArticleBlockType {
-    CODE = 'CODE',
-    IMAGE = 'IMAGE',
-    TEXT = 'TEXT',
-}
 export interface ArticleBlockBase {
     id: string;
-    type: ArticleBlockType;
+    type: ArticleBlockTypesType;
 }
 export interface ArticleCodeBlock extends ArticleBlockBase {
-        type: ArticleBlockType.CODE;
+        type: typeof ArticleBlockTypes.CODE;
         code: string;
 }
 export interface ArticleImageBlock extends ArticleBlockBase {
-    type: ArticleBlockType.IMAGE;
+    type: typeof ArticleBlockTypes.IMAGE;
     src: string;
-    title: string;
+    title?: string;
 }
 export interface ArticleTextBlock extends ArticleBlockBase {
-    type: ArticleBlockType.TEXT;
+    type: typeof ArticleBlockTypes.TEXT;
     title?: string;
     paragraphs: string[];
 }
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
-export enum ArticleView {
-    BIG = 'BIG',
-    SMALL = 'SMALL'
-}
-export enum ArticleType {
-    ALL = 'ALL',
-    IT = 'IT',
-    SCIENCE = 'SCIENCE',
-    ECONOMICS = 'ECONOMICS',
-    HUMOR = 'HUMOR',
-}
+
 export interface Article {
-    id: string;
-    title: string;
-    user: User;
-    subtitle: string;
-    img: string;
-    views: number;
-    createdAt: string;
-    type: ArticleType[];
-    blocks: ArticleBlock[];
+    id: string,
+    title: string,
+    subtitle: string,
+    img: string,
+    user: User,
+    views: number,
+    createdAt: string,
+    type: ArticleTypesType[],
+    blocks: ArticleBlock[]
 }

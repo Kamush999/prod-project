@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { ArticleView } from 'entities/Article';
+import { ArticleView, ArticleViewTypes } from 'entities/Article';
 import BigIcon from 'shared/assets/icons/line_articles.svg';
 import SmallIcon from 'shared/assets/icons/tiles_articles.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -9,8 +9,8 @@ import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
     className?: string;
-    view: ArticleView,
-    onViewClick?: (view: ArticleView) => void;
+    view: ArticleViewTypes,
+    onViewClick?: (view: ArticleViewTypes) => void;
 }
 
 const viewTypes = [
@@ -25,7 +25,7 @@ const viewTypes = [
 ];
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { className, onViewClick, view } = props;
-    const onClick = (newView: ArticleView) => () => {
+    const onClick = (newView: ArticleViewTypes) => () => {
         onViewClick?.(newView);
     };
     return (

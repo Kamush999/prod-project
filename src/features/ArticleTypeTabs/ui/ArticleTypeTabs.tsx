@@ -2,12 +2,12 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useMemo } from 'react';
 import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
-import { ArticleType } from 'entities/Article';
+import { ArticleTypes, ArticleTypesType } from 'entities/Article';
 
 interface ArticleTypeTabsProps {
     className?: string;
-    value: ArticleType;
-    onChangeType: (type: ArticleType) => void;
+    value: ArticleTypesType;
+    onChangeType: (type: ArticleTypesType) => void;
 }
 
 export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
@@ -19,29 +19,29 @@ export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
     } = props;
     const typeTabs = useMemo<TabItem[]>(() => [
         {
-            value: ArticleType.ALL,
+            value: ArticleTypes.ALL,
             content: t('Все'),
         },
         {
-            value: ArticleType.IT,
+            value: ArticleTypes.IT,
             content: t('Айти'),
         },
         {
-            value: ArticleType.SCIENCE,
+            value: ArticleTypes.SCIENCE,
             content: t('Наука'),
         },
         {
-            value: ArticleType.ECONOMICS,
+            value: ArticleTypes.ECONOMICS,
             content: t('Экономика'),
         },
         {
-            value: ArticleType.HUMOR,
+            value: ArticleTypes.HUMOR,
             content: t('Юмор'),
         },
     ], [t]);
 
     const onTabClick = useCallback((tab: TabItem) => {
-        onChangeType(tab.value as ArticleType);
+        onChangeType(tab.value as ArticleTypesType);
     }, [onChangeType]);
 
     return (

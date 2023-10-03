@@ -1,11 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, useMemo } from 'react';
+import { memo, useCallback } from 'react';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
 import {
-    ArticleSortField,
-    ArticleSortSelector, ArticleTypeTabs,
-    ArticleView,
+    ArticleSortField, ArticleSortFieldTypes,
+    ArticleSortSelector, ArticleTypesType,
+    ArticleView, ArticleViewTypes,
 } from 'entities/Article';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
@@ -13,7 +13,7 @@ import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
-import { ArticleType } from 'entities/Article/model/types/article';
+import { ArticleTypeTabs } from 'features/ArticleTypeTabs';
 import {
     fetchArticlesList,
 } from '../../model/services/fetchArticlesList/fetchArticlesList';
@@ -48,11 +48,11 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
     const debouncedFetchData = useDebounce(fetchData, 500);
 
-    const onChangeView = useCallback((view: ArticleView) => {
+    const onChangeView = useCallback((view: ArticleViewTypes) => {
         dispatch(articlesPageActions.setView(view));
     }, [dispatch]);
 
-    const onChangeSort = useCallback((newSort: ArticleSortField) => {
+    const onChangeSort = useCallback((newSort: ArticleSortFieldTypes) => {
         dispatch(articlesPageActions.setSort(newSort));
         dispatch(articlesPageActions.setPage(1));
         fetchData();
@@ -70,7 +70,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
         debouncedFetchData();
     }, [dispatch, debouncedFetchData]);
 
-    const onChangeType = useCallback((value: ArticleType) => {
+    const onChangeType = useCallback((value: ArticleTypesType) => {
         dispatch(articlesPageActions.setType(value));
         dispatch(articlesPageActions.setPage(1));
         debouncedFetchData();

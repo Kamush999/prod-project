@@ -61,6 +61,7 @@
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-i18next": "^5.1.2",
+    "eslint-plugin-ilya-plugin": "^0.0.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.2",
@@ -73,6 +74,7 @@
     "json-server": "^0.17.3",
     "loki": "^0.31.1",
     "mini-css-extract-plugin": "^2.5.3",
+    "react-editor-js": "^2.1.0",
     "react-refresh": "^0.14.0",
     "reg-cli": "^0.17.7",
     "regenerator-runtime": "^0.13.9",
@@ -90,6 +92,14 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@editorjs/code": "^2.8.0",
+    "@editorjs/editorjs": "^2.26.5",
+    "@editorjs/image": "^2.8.1",
+    "@editorjs/paragraph": "^2.9.0",
+    "@editorjs/checklist": "^1.5.0",
+    "@editorjs/link": "^2.5.0",
+    "@editorjs/raw": "^2.4.0",
+    "@editorjs/simple-image": "^1.5.1",
     "@reduxjs/toolkit": "^1.8.0",
     "concurrently": "^8.0.1",
     "i18next": "^21.6.11",
@@ -99,7 +109,8 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
     "react-redux": "^7.2.6",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "react-virtuoso": "^4.3.6"
   },
   "loki": {
     "configurations": {

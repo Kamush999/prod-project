@@ -1,10 +1,14 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { getUserAuthData } from 'entities/User';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import MainIcon from 'shared/assets/icons/homePage.svg';
 import AboutIcon from 'shared/assets/icons/aboutPage.svg';
 import ProfileIcon from 'shared/assets/icons/man_icon.svg';
 import ArticleIcon from 'shared/assets/icons/article.svg';
+import {
+    getRouteAbout, getRouteAdminPanel, getRouteArticles, getRouteDiary,
+    getRouteMain,
+    getRouteProfile,
+} from 'shared/const/router';
 import { SidebarItemType } from '../../model/types/sidebar';
 
 export const getSidebarItems = createSelector(
@@ -12,32 +16,37 @@ export const getSidebarItems = createSelector(
     (userData) => {
         const sidebarItemsList: SidebarItemType[] = [
             {
-                path: RoutePath.main,
+                path: getRouteMain(),
                 Icon: MainIcon,
                 text: 'Главная',
             },
             {
-                path: RoutePath.about,
+                path: getRouteAbout(),
                 Icon: AboutIcon,
                 text: 'О сайте',
+            },
+            {
+                path: getRouteDiary(),
+                Icon: AboutIcon,
+                text: 'Дневник',
             },
         ];
         if (userData) {
             sidebarItemsList.push(
                 {
-                    path: RoutePath.profile + userData.id,
+                    path: getRouteProfile(userData.id),
                     Icon: ProfileIcon,
                     text: 'Профиль',
                     authOnly: true,
                 },
                 {
-                    path: RoutePath.my_admin,
+                    path: getRouteAdminPanel(),
                     Icon: ProfileIcon,
                     text: 'Админ панель',
                     authOnly: true,
                 },
                 {
-                    path: RoutePath.articles,
+                    path: getRouteArticles(),
                     Icon: ArticleIcon,
                     text: 'Статьи',
                     authOnly: true,

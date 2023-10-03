@@ -13,7 +13,6 @@ import {
     ArticleList,
 } from 'entities/Article';
 import {
-    useNavigate,
     useParams,
 } from 'react-router-dom';
 import {
@@ -40,14 +39,15 @@ import {
     AddNewComment,
 } from 'features/addNewComment';
 import {
-    addCommentForArticle,
-} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
-import {
     Page,
 } from 'widgets/Page/Page';
+import { VStack } from 'shared/ui/Stack';
+import {
+    addCommentForArticle,
+} from '../../model/services/addCommentForArticle/addCommentForArticle';
 import {
     ArticleDetailsPageHeader,
-} from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+} from '../../ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import {
     articleDetailsPageReducer,
 } from '../../model/slices';
@@ -82,7 +82,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const {
         className,
     } = props;
-    const { id } = useParams<{id: string}>();
+    const { id = '1' } = useParams<{id: string}>();
     const dispatch = useAppDispatch();
     const comments = useSelector(getArticleComments.selectAll);
     const recommendations = useSelector(getArticleRecommendations.selectAll);
@@ -106,29 +106,31 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <ArticleDetailsPageHeader />
-                <ArticleDetails id={id} />
-                <Text
-                    size={TextSize.L}
-                    className={cls.commentTitle}
-                    title={t('Рекомендуем')}
-                />
-                <ArticleList
-                    isLoading={recommendationsIsLoading}
-                    articles={recommendations}
-                    className={cls.recommendations}
-                    target="_blank"
-                />
-                <Text
-                    size={TextSize.L}
-                    className={cls.commentTitle}
-                    title={t('Комментарии')}
-                />
-                <AddNewComment onSendComment={onSendComment} />
-                <CommentList
-                    isLoading={commentsIsLoading}
-                    comments={comments}
-                />
+                <VStack gap="16" max>
+                    <ArticleDetailsPageHeader />
+                    <ArticleDetails id={id} />
+                    <Text
+                        size={TextSize.L}
+                        className={cls.commentTitle}
+                        title={t('Рекомендуем')}
+                    />
+                    <ArticleList
+                        isLoading={recommendationsIsLoading}
+                        articles={recommendations}
+                        className={cls.recommendations}
+                        target="_blank"
+                    />
+                    <Text
+                        size={TextSize.L}
+                        className={cls.commentTitle}
+                        title={t('Комментарии')}
+                    />
+                    <AddNewComment onSendComment={onSendComment} />
+                    <CommentList
+                        isLoading={commentsIsLoading}
+                        comments={comments}
+                    />
+                </VStack>
             </Page>
         </DynamicModuleLoader>
     );

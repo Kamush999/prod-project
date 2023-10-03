@@ -1,30 +1,29 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
 import EyeIcon from 'shared/assets/icons/eye_icon.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { Card } from 'shared/ui/Card/Card';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { useNavigate } from 'react-router-dom';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { getRouteArticleDetail } from 'shared/const/router';
 import {
     ArticleTextBlockComponent,
 } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
     Article,
-    ArticleBlockType,
     ArticleTextBlock,
-    ArticleView,
+    ArticleViewTypes,
 } from '../../model/types/article';
+import { ArticleBlockTypes, ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemProps {
     className?: string;
     article: Article;
-    view: ArticleView;
+    view: ArticleViewTypes;
     target?: HTMLAttributeAnchorTarget;
 }
 
@@ -46,7 +45,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     );
     if (view === ArticleView.BIG) {
         const textBlock = article.blocks.find(
-            (block) => block.type === ArticleBlockType.TEXT,
+            (block) => block.type === ArticleBlockTypes.TEXT,
         ) as ArticleTextBlock;
 
         return (
@@ -66,7 +65,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     <div className={cls.footer}>
                         <AppLink
                             target={target}
-                            to={RoutePath.article_details + article.id}
+                            to={getRouteArticleDetail(article.id)}
                         >
                             <Button theme={ButtonTheme.CLEAR}>
                                 {t('Читать далее...')}
@@ -81,7 +80,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetail(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.card}>

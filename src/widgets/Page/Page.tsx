@@ -14,9 +14,10 @@ import {
 import { useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
+import { TestProps } from 'shared/types/tests';
 import cls from './Page.module.scss';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
@@ -31,7 +32,7 @@ export const Page = (props: PageProps) => {
     const scrollPosition = useSelector(
         (state: StateSchema) => getPosScrollByPath(state, pathname),
     );
-
+    const pageId = 'PAGE_ID';
     useInfiniteScroll({
         triggerRef,
         wrapperRef,
@@ -50,13 +51,16 @@ export const Page = (props: PageProps) => {
     }, 500);
 
     return (
-        <section
+        <main
+            id={pageId}
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
+            // eslint-disable-next-line react/destructuring-assignment
+            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
-        </section>
+        </main>
     );
 };

@@ -8,6 +8,7 @@ import {
     DynamicModuleLoader, ReducersList,
 } from 'shared/lib/components/DynamicsModuleLoader/DynamicModuleLoader';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { HStack } from 'shared/ui/Stack';
 import {
     addNewCommentActions, addNewCommentReducer,
 } from '../../model/slices/addNewCommentSlice';
@@ -43,7 +44,7 @@ const AddNewComment = memo((props: AddNewCommentProps) => {
     }, [onCommentTextChange, onSendComment, text]);
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.AddNewComment, {}, [className])}>
+            <HStack max justify="between" className={classNames(cls.AddNewComment, {}, [className])}>
                 <Input
                     className={cls.input}
                     value={text}
@@ -56,7 +57,7 @@ const AddNewComment = memo((props: AddNewCommentProps) => {
                 >
                     {t('Отправить')}
                 </Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
     );
 });

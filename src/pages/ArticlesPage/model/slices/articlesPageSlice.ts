@@ -7,7 +7,10 @@ import {
     Article,
     ArticleView,
     ArticleSortField,
-    ArticleType,
+    ArticleTypes,
+    ArticleViewTypes,
+    ArticleSortFieldTypes,
+    ArticleTypesType,
 } from 'entities/Article';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
@@ -38,10 +41,10 @@ const articlesPageSlice = createSlice({
         order: 'asc',
         limit: 9,
         _inited: false,
-        type: ArticleType.ALL,
+        type: ArticleTypes.ALL,
     }),
     reducers: {
-        setView: (state, action: PayloadAction<ArticleView>) => {
+        setView: (state, action: PayloadAction<ArticleViewTypes>) => {
             state.view = action.payload;
             localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload);
         },
@@ -51,17 +54,17 @@ const articlesPageSlice = createSlice({
         setOrder: (state, action: PayloadAction<SortOrder>) => {
             state.order = action.payload;
         },
-        setSort: (state, action: PayloadAction<ArticleSortField>) => {
+        setSort: (state, action: PayloadAction<ArticleSortFieldTypes>) => {
             state.sort = action.payload;
         },
-        setType: (state, action: PayloadAction<ArticleType>) => {
+        setType: (state, action: PayloadAction<ArticleTypesType>) => {
             state.type = action.payload;
         },
         setSearch: (state, action: PayloadAction<string>) => {
             state.search = action.payload;
         },
         initState: (state) => {
-            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleViewTypes;
             state.view = view;
             state.limit = view === ArticleView.BIG ? 4 : 10;
             state._inited = true;

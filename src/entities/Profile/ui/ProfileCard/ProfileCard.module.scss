@@ -4,23 +4,9 @@
     transition: border 0.6s;
 }
 
-.input,
-.select {
-    margin-top: 6px;
-}
-
 .loading,
 .error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 300px;
-}
-
-.avatarWrapper {
-    display: inherit;
-    width: 100%;
-    justify-content: center;
 }
 
 .editing {

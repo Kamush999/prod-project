@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleList } from 'entities/Article';
 import {
@@ -12,10 +11,10 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Page } from 'widgets/Page/Page';
+import { useSearchParams } from 'react-router-dom';
 import {
     ArticlesPageFilters,
-} from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
-import { useSearchParams } from 'react-router-dom';
+} from '../../ui/ArticlesPageFilters/ArticlesPageFilters';
 import {
     fetchNextArticlesPage,
 } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
@@ -40,7 +39,6 @@ const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
 };
 const ArticlesPage = (props: ArticlesPageProps) => {
-    const { t } = useTranslation();
     const {
         className,
     } = props;
