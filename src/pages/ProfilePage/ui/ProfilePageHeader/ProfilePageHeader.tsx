@@ -44,7 +44,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                     {readonly
                         ? (
                             <Button
-                                theme={ButtonTheme.CLEAR}
+                                theme={ButtonTheme.OUTLINE}
                                 onClick={onEdit}
                             >
                                 {t('Редактировать')}
@@ -53,7 +53,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                         : (
                             <HStack gap="8">
                                 <Button
-                                    theme={ButtonTheme.CLEAR}
+                                    theme={ButtonTheme.OUTLINE}
                                     onClick={onSave}
                                 >
                                     {t('Сохранить')}

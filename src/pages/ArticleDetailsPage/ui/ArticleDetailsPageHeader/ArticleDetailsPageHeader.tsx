@@ -39,12 +39,12 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
             justify="between"
             className={classNames('', {}, [className])}
         >
-            <Button theme={ButtonTheme.CLEAR} onClick={onBackToList}>
+            <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                 {t('Назад к списку')}
             </Button>
             { canEdit && (
                 <Button
-                    theme={ButtonTheme.CLEAR}
+                    theme={ButtonTheme.OUTLINE}
                     onClick={onEditArticle}
                 >
                     {t('Редактировать')}

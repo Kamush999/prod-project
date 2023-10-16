@@ -1,6 +1,8 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
+import {
+    Text, TextAlign, TextSize, TextTheme,
+} from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
@@ -121,11 +123,13 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 onChange={onChangeCity}
                 readonly={readonly}
             />
+
             <CurrencySelect
                 value={data?.currency}
                 onChange={onChangeCurrency}
                 readonly={readonly}
             />
+
             <Input
                 value={data?.avatar}
                 placeholder={t('Ссылка на аватар')}

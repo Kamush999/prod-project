@@ -52,7 +52,7 @@ const AddNewComment = memo((props: AddNewCommentProps) => {
                     placeholder={t('Введите новый комментарий')}
                 />
                 <Button
-                    theme={ButtonTheme.CLEAR}
+                    theme={ButtonTheme.OUTLINE}
                     onClick={onSendHandler}
                 >
                     {t('Отправить')}
