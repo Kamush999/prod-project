@@ -22,7 +22,7 @@ interface PageProps extends TestProps {
     children: ReactNode;
     onScrollEnd?: () => void;
 }
-
+export const pageId = 'PAGE_ID';
 export const Page = (props: PageProps) => {
     const { className, children, onScrollEnd } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
@@ -32,7 +32,6 @@ export const Page = (props: PageProps) => {
     const scrollPosition = useSelector(
         (state: StateSchema) => getPosScrollByPath(state, pathname),
     );
-    const pageId = 'PAGE_ID';
     useInfiniteScroll({
         triggerRef,
         wrapperRef,
@@ -56,8 +55,6 @@ export const Page = (props: PageProps) => {
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
-            // eslint-disable-next-line react/destructuring-assignment
-            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
