@@ -15,21 +15,23 @@
 }
 
 .options {
-    background: var(--card-bg);
+    background: var(--secondary-color);
     position: absolute;
     z-index: 10000;
     border-radius: 6px;
     box-shadow: 2px 2px 4px var(--card-bg);
-    width: 100%;
+    margin-top: 10px;
+    width: 200px;
 }
 
 .item {
     transition: 0.2s;
-    padding: 8px 12px;
+    padding: 8px 0 8px 16px;
+    margin: 0;
 }
 
 .active {
-    background: var(--secondary-color);
+    background: var(--third-color);
     border-radius: 6px;
 }
 
@@ -37,6 +39,22 @@
     opacity: 0.7;
 }
 
-.optionsTop {
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsTopRight {
     bottom: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    bottom: 100%;
+    right: 0;
 }

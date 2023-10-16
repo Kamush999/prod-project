@@ -34,12 +34,6 @@ export const getSidebarItems = createSelector(
         if (userData) {
             sidebarItemsList.push(
                 {
-                    path: getRouteProfile(userData.id),
-                    Icon: ProfileIcon,
-                    text: 'Профиль',
-                    authOnly: true,
-                },
-                {
                     path: getRouteAdminPanel(),
                     Icon: ProfileIcon,
                     text: 'Админ панель',

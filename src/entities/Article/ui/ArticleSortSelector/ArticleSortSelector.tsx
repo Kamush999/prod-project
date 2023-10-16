@@ -67,7 +67,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
                 items={orderOptions}
                 defaultValue={ArticleSortField.CREATED}
                 className={classNames('', {}, [className])}
-                direction="bottom"
+                direction="bottom left"
             />
             <ListBox
                 placeholder={t('по')}
@@ -80,7 +80,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
                 items={sortFieldOptions}
                 defaultValue="asc"
                 className={classNames(cls.order, {}, [className])}
-                direction="bottom"
+                direction="bottom left"
             />
             {/* <Select */}
             {/*     options={sortFieldOptions} */}

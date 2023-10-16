@@ -1,6 +1,7 @@
 import React, { Fragment, InputHTMLAttributes, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { DropdownDirection } from 'shared/types/ui';
 import { HStack } from '../Stack';
 import cls from './ListBox.module.scss';
 import { Button } from '../Button/Button';
@@ -9,7 +10,7 @@ export interface ListBoxItem {
     value: string;
     content: ReactNode;
     disabled?: boolean;
-}type DropdownDirection = 'top' | 'bottom';
+}
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 interface ListBoxProps extends HTMLInputProps {
     items?: ListBoxItem[];
@@ -22,8 +23,10 @@ interface ListBoxProps extends HTMLInputProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-    bottom: cls.optionsBottom,
-    top: cls.optionsTop,
+    'bottom right': cls.optionsBottomRight,
+    'bottom left': cls.optionsBottomLeft,
+    'top right': cls.optionsTopRight,
+    'top left': cls.optionsTopLeft,
 };
 
 export function ListBox(props: ListBoxProps) {
@@ -35,7 +38,7 @@ export function ListBox(props: ListBoxProps) {
         onChange,
         readonly,
         placeholder,
-        direction = 'bottom',
+        direction = 'bottom right',
     } = props;
 
     const optionsClasses = [mapDirectionClass[direction]];

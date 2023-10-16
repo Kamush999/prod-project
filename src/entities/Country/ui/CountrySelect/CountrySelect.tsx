@@ -36,7 +36,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
             defaultValue={Country.KAZAKHSTAN}
             className={classNames('', {}, [className])}
             readonly={readonly}
-            direction="top"
+            direction="top right"
         />
     );
 });

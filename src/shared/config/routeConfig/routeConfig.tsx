@@ -35,6 +35,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.ADMIN]: {
         path: getRouteAdminPanel(),
         element: <AdminPage />,
+        authOnly: true,
     },
     [AppRoutes.PROFILE]: {
         path: getRouteProfile(':id'),
