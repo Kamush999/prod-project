@@ -1,4 +1,3 @@
-import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import {
@@ -9,17 +8,20 @@ import {
 } from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
-import { ProfileSchema } from 'entities/Profile';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { AddNewCommentSchema } from 'features/addNewComment';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
 import { ScrollSaveSchema } from 'features/ScrollSave';
+import { rtkApi } from 'shared/api/rtkApi';
+import {
+    ProfileSchema,
+} from 'features/editableProfileCard/model/types/editableProfileCardSchema';
 
 export interface StateSchema {
-    counter: CounterSchema;
     user: UserSchema;
     scroll: ScrollSaveSchema;
+    [rtkApi.reducerPath]:ReturnType<typeof rtkApi.reducer>
 
     // async reducers
     loginForm?: LoginSchema;

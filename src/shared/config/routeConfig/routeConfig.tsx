@@ -13,11 +13,10 @@ import {
     getRouteAdminPanel,
     getRouteArticleDetail, getRouteArticleEdit,
     getRouteArticleNew,
-    getRouteArticles, getRouteDiary,
+    getRouteArticles,
     getRouteMain, getRouteNotFound,
     getRouteProfile,
 } from 'shared/const/router';
-import { DiaryPage } from 'pages/DiaryPage';
 
 export type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
@@ -61,10 +60,6 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         path: getRouteArticleEdit(':id'),
         element: <ArticleEditPage />,
         authOnly: true,
-    },
-    [AppRoutes.DIARY]: {
-        path: getRouteDiary(),
-        element: <DiaryPage />,
     },
     // last
     [AppRoutes.NOT_FOUND]: {

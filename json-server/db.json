@@ -282,7 +282,7 @@
       "createdAt": "26.06.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -644,9 +644,9 @@
       "first": "Админ",
       "lastname": "Админыч",
       "age": 666,
-      "currency": "USD",
+      "currency": "KZT",
       "country": "Kazakhstan",
-      "city": "fuck society",
+      "city": "fuck society 1",
       "username": "admin",
       "avatar": "https://i.pinimg.com/736x/db/6f/0e/db6f0ef17e4e91005cb6e31581419d1e.jpg"
     },

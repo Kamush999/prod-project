@@ -5,9 +5,8 @@ import AboutIcon from 'shared/assets/icons/aboutPage.svg';
 import ProfileIcon from 'shared/assets/icons/man_icon.svg';
 import ArticleIcon from 'shared/assets/icons/article.svg';
 import {
-    getRouteAbout, getRouteAdminPanel, getRouteArticles, getRouteDiary,
+    getRouteAbout, getRouteAdminPanel, getRouteArticles,
     getRouteMain,
-    getRouteProfile,
 } from 'shared/const/router';
 import { SidebarItemType } from '../../model/types/sidebar';
 
@@ -24,11 +23,6 @@ export const getSidebarItems = createSelector(
                 path: getRouteAbout(),
                 Icon: AboutIcon,
                 text: 'О сайте',
-            },
-            {
-                path: getRouteDiary(),
-                Icon: AboutIcon,
-                text: 'Дневник',
             },
         ];
         if (userData) {
