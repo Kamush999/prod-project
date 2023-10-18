@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Page } from 'widgets/Page/Page';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import { Text } from 'shared/ui/Text/Text';
 // import { ArticleEdit } from 'entities/Article';
 import cls from './ArticleEditPage.module.scss';
@@ -11,10 +11,9 @@ interface ArticleEditPageProps {
 
 const ArticleEditPage = (props: ArticleEditPageProps) => {
     const { className } = props;
-    const { id } = useParams<{ id: string }>();
+    // const { id } = useParams<{ id: string }>();
     const cn = classNames(cls.ArticleEditPage, {}, [className]);
 
-    console.log(id, 'ArticleEditPage');
     return (
         <Page className={cn}>
             {/* TODO add editor widget */}
