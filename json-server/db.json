@@ -619,6 +619,12 @@
       "userId": "1",
       "text": "das",
       "id": "5vcBGW-"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "[[",
+      "id": "VcdRX3r"
     }
   ],
   "users": [
@@ -626,21 +632,27 @@
       "id": "1",
       "username": "admin",
       "password": "12345",
-      "role": "OWNER",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://i.pinimg.com/736x/db/6f/0e/db6f0ef17e4e91005cb6e31581419d1e.jpg"
     },
     {
       "id": "2",
       "username": "rinka",
       "password": "12345",
-      "role": "ADMIN",
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
     },
     {
       "id": "3",
       "username": "alexpat",
       "password": "12345",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://i.pinimg.com/564x/87/69/bd/8769bdc37e86759908b5a50b86fa5929.jpg"
     }
   ],

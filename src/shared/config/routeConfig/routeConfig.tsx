@@ -11,15 +11,20 @@ import {
     AppRoutes,
     getRouteAbout,
     getRouteAdminPanel,
-    getRouteArticleDetail, getRouteArticleEdit,
+    getRouteArticleDetail,
+    getRouteArticleEdit,
     getRouteArticleNew,
-    getRouteArticles,
-    getRouteMain, getRouteNotFound,
+    getRouteArticles, getRouteForbidden,
+    getRouteMain,
+    getRouteNotFound,
     getRouteProfile,
 } from 'shared/const/router';
+import { UserRole } from 'entities/User/model/types/user';
+import { ForbiddenPage } from 'pages/ForbiddenPage';
 
 export type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
+    roles?: UserRole[];
 }
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
@@ -35,6 +40,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         path: getRouteAdminPanel(),
         element: <AdminPage />,
         authOnly: true,
+        roles: [UserRole.ADMIN],
     },
     [AppRoutes.PROFILE]: {
         path: getRouteProfile(':id'),
@@ -59,6 +65,11 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.ARTICLE_EDIT]: {
         path: getRouteArticleEdit(':id'),
         element: <ArticleEditPage />,
+        authOnly: true,
+    },
+    [AppRoutes.FORBIDDEN]: {
+        path: getRouteForbidden(),
+        element: <ForbiddenPage />,
         authOnly: true,
     },
     // last

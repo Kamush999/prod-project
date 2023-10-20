@@ -7,6 +7,7 @@ export enum AppRoutes {
     ARTICLE_DETAILS = 'article_details',
     ARTICLE_CREATE = 'article_create',
     ARTICLE_EDIT = 'article_edit',
+    FORBIDDEN = 'forbidden',
     // last page not found page!!!
     NOT_FOUND = 'not_found',
 }
@@ -15,6 +16,7 @@ export const getRouteMain = () => '/';
 export const getRouteAbout = () => '/about';
 export const getRouteProfile = (id: string) => `/profile/${id}`;
 export const getRouteArticles = () => '/articles';
+export const getRouteForbidden = () => '/forbidden';
 export const getRouteArticleDetail = (id: string) => `/articles/${id}`;
 export const getRouteArticleNew = () => '/articles/new';
 export const getRouteArticleEdit = (id: string) => `/articles/${id}/edit`;
