@@ -12,7 +12,8 @@ export {
     userReducer,
     userActions,
 } from './model/slice/userSlice';
-export {
+export type {
     UserSchema,
     User,
 } from './model/types/user';
+export { UserRole } from './model/consts/consts';

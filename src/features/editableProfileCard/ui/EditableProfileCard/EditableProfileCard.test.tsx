@@ -5,8 +5,8 @@ import { Currency } from 'entities/Currency';
 import { userEvent } from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
 import { $api } from 'shared/api/api';
-import { EditableProfileCard } from '../../ui';
 import { profileReducer } from '../../model/slice/profileSlice';
+import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {
     id: '1',

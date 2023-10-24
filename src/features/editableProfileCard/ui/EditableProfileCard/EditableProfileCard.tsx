@@ -38,9 +38,7 @@ import {
 import {
     getProfileIsLoading,
 } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
-import {
-    ValidateProfileErrors,
-} from '../../model/types/editableProfileCardSchema';
+import { ValidateProfileErrors } from '../../model/consts/consts';
 
 interface EditableProfileCardProps {
     className?: string;

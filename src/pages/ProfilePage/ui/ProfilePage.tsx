@@ -3,7 +3,7 @@ import { Page } from 'widgets/Page/Page';
 import { VStack } from 'shared/ui/Stack/VStack/VStack';
 import {
     EditableProfileCard,
-} from 'features/editableProfileCard/ui/EditableProfileCard/EditableProfileCard';
+} from 'features/editableProfileCard';
 import { useParams } from 'react-router-dom';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';

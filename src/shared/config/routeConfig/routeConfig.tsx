@@ -19,7 +19,7 @@ import {
     getRouteNotFound,
     getRouteProfile,
 } from 'shared/const/router';
-import { UserRole } from 'entities/User/model/types/user';
+import { UserRole } from 'entities/User';
 import { ForbiddenPage } from 'pages/ForbiddenPage';
 
 export type AppRoutesProps = RouteProps & {

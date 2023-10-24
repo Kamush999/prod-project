@@ -16,7 +16,7 @@ import { ScrollSaveSchema } from 'features/ScrollSave';
 import { rtkApi } from 'shared/api/rtkApi';
 import {
     ProfileSchema,
-} from 'features/editableProfileCard/model/types/editableProfileCardSchema';
+} from 'features/editableProfileCard';
 
 export interface StateSchema {
     user: UserSchema;

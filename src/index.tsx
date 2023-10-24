@@ -24,9 +24,3 @@ root.render(
         </StoreProvider>
     </BrowserRouter>,
 );
-export {
-    ProfileSchema,
-} from 'features/editableProfileCard/model/types/editableProfileCardSchema';
-export {
-    ValidateProfileErrors,
-} from 'features/editableProfileCard/model/types/editableProfileCardSchema';
