@@ -1,11 +1,11 @@
 import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
-import { EditableProfileCard } from 'features/editableProfileCard/ui';
 import { Profile } from 'entities/Profile';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { userEvent } from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
 import { $api } from 'shared/api/api';
+import { EditableProfileCard } from '../../ui';
 import { profileReducer } from '../../model/slice/profileSlice';
 
 const profile: Profile = {

@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback } from 'react';
+import { memo, useCallback, Suspense } from 'react';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { AddNewComment } from 'features/addNewComment';
 import { CommentList } from 'entities/Comment';
