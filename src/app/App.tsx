@@ -6,7 +6,6 @@ import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserInited, userActions } from 'entities/User';
-
 function App() {
     const { theme } = useTheme();
     const dispatch = useDispatch();

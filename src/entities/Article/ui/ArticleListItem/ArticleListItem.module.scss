@@ -34,7 +34,7 @@
     }
 
     .textBlock {
-        max-height: 200px;
+        max-height: 190px;
         overflow-y: hidden;
     }
 }
@@ -62,32 +62,32 @@
 
     .imageWrapper {
         width: 200px;
-        height: 185px;
+        height: 165px;
         position: relative;
     }
 
     .img {
         width: 200px;
-        height: 200px;
+        height: 165px;
         object-fit: cover;
     }
 
     .infoWrapper {
         display: flex;
         align-items: center;
-        margin-top: 8px;
+        margin-top: 2px;
         width: 200px;
     }
 
     .types p {
-        width: 70px;
+        width: 80px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
     .views {
-        width: 110px;
+        width: 100px;
         margin-right: auto;
     }
 

@@ -68,6 +68,7 @@
     "react-refresh": "^0.14.0",
     "reg-cli": "^0.17.7",
     "regenerator-runtime": "^0.13.9",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
