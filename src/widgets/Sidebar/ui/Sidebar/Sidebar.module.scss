@@ -1,27 +1,33 @@
 .Sidebar {
     height: calc(100vh - var(--navbar-height));
-    width: var(--sidebar-width);
+    width: 400px;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background: var(--third-color);
-    position: relative;
-    transition: width 0.1s, background 0.1s;
+    position: fixed;
+    display: flex;
+    transition: transform 0.1s, width 0.1s, background 0.1s;
+    transform: translateX(0);
+}
+
+.collapseBtn {
+    position: absolute;
+    right: -40px;
+    bottom: 50%;
 }
 
 .switchers {
     position: absolute;
     bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
+    margin-left: 20px;
 }
 
 .lang {
     margin-left: 20px;
-}
-
-.collapseBtn {
-    position: absolute;
-    right: -40px;
-    bottom: 0;
 }
 
 .items {
@@ -30,16 +36,6 @@
 }
 
 .collapsed {
-    width: var(--sidebar-width-collapsed);
-    transition: background 0.1s, width 0.1s;
-    background: var(--secondary-color);
-
-    .switchers {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lang {
-        margin-left: 0;
-    }
+    transition: transform 0.1s, background 0.1s;
+    transform: translateX(-100%);
 }
