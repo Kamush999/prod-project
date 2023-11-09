@@ -5,8 +5,6 @@ import {Dropdown} from "shared/ui/Popups";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
 import {getUserAuthData, isUserAdmin, isUserManager, userActions} from "entities/User";
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './AvatarDropdown.module.scss';
 
 interface AvatarDropdownProps {
     className?: string;
@@ -29,7 +27,6 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
 
     return (
         <Dropdown
-            className={classNames(cls.AvatarDropdown, {}, [className])}
             direction="bottom left"
             items={[
                 ...(isAdmin ? [{
