@@ -15,7 +15,7 @@ interface ArticleListProps {
     view?: ArticleViewTypes;
     target?: HTMLAttributeAnchorTarget;
 }
-const getSkeletons = (view: ArticleViewTypes) => new Array(view === ArticleView.SMALL ? 10 : 3)
+const getSkeletons = (view: ArticleViewTypes) => new Array(view === ArticleView.SMALL ? 15 : 3)
     .fill(0)
     .map((item, index) => (
         <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
