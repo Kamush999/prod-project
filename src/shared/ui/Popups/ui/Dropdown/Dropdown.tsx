@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Fragment, ReactNode } from 'react';
 import { DropdownDirection } from 'shared/types/ui';
 import { AppLink } from '../../../AppLink/AppLink';
-import {mapDirectionClass} from "../../styles/consts";
+import { mapDirectionClass } from '../../styles/consts';
 import cls from './Dropdown.module.scss';
 import popupCls from '../../styles/popup.module.scss';
 

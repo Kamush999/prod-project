@@ -5,13 +5,13 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
-import { Text, TextTheme} from 'shared/ui/Text/Text';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { getRouteArticleNew } from 'shared/const/router';
-import { HStack } from "shared/ui/Stack";
-import { NotificationButton } from "features/notificationButton";
+import { HStack } from 'shared/ui/Stack';
+import { NotificationButton } from 'features/notificationButton';
+import { AvatarDropdown } from 'features/avatarDropdown';
 import cls from './Navbar.module.scss';
-import { AvatarDropdown } from "features/avatarDropdown";
 
 interface NavbarProps {
     className?: string;
@@ -46,7 +46,7 @@ export const Navbar = memo((props: NavbarProps) => {
                 >
                     {t('Создать статью')}
                 </AppLink>
-                <HStack gap={'16'} className={cls.actions}>
+                <HStack gap="16" className={cls.actions}>
                     <NotificationButton />
                     <AvatarDropdown />
                 </HStack>

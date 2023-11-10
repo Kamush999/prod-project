@@ -4,9 +4,10 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 import { HStack } from '../../../Stack';
 import { Button } from '../../../Button/Button';
-import {mapDirectionClass} from "../../styles/consts";
+import { mapDirectionClass } from '../../styles/consts';
 import cls from './ListBox.module.scss';
 import popupCls from '../../styles/popup.module.scss';
+
 export interface ListBoxItem {
     value: string;
     content: ReactNode;

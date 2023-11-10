@@ -1,41 +1,41 @@
 .popup {
-  position: relative;
+    position: relative;
 }
 
 .trigger {
-  background: none;
-  outline: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-  cursor: pointer;
+    background: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
 }
 
 .active {
-  background: var(--third-color);
-  border-radius: 6px;
+    background: var(--third-color);
+    border-radius: 6px;
 }
 
 .disabled {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .menuBottomRight {
-  top: 100%;
-  left: 0;
+    top: 100%;
+    left: 0;
 }
 
 .menuBottomLeft {
-  top: 100%;
-  right: 0;
+    top: 100%;
+    right: 0;
 }
 
 .menuTopRight {
-  bottom: 100%;
-  left: 0;
+    bottom: 100%;
+    left: 0;
 }
 
 .menuTopLeft {
-  bottom: 100%;
-  right: 0;
+    bottom: 100%;
+    right: 0;
 }

@@ -1,9 +1,9 @@
 .panel {
-  background: var(--secondary-color);
-  position: absolute;
-  z-index: 10000;
-  border-radius: 12px;
-  border: 1px solid var(--primary-color);
-  flex-direction: column;
-  padding: 12px;
+    background: var(--secondary-color);
+    position: absolute;
+    z-index: 10000;
+    border-radius: 12px;
+    border: 1px solid var(--primary-color);
+    flex-direction: column;
+    padding: 12px;
 }

@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
+
 :root {
-    --font-family-pixel-en: 'Pixelify Sans', sans-serif;
-    --font-family-pixel-ru: 'Press Start 2P', sans-serif;
-    --font-family-error: 'Rubik Glitch', sans-serif;
-    --font-family-normal: 'Tektur', sans-serif;
+    --font-family-pixel-en: "Pixelify Sans", sans-serif;
+    --font-family-pixel-ru: "Press Start 2P", sans-serif;
+    --font-family-error: "Rubik Glitch", sans-serif;
+    --font-family-normal: "Tektur", sans-serif;
     --font-size-s: 8px;
     --font-line-s: 12px;
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-normal);

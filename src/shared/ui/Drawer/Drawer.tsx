@@ -1,10 +1,10 @@
-import { memo, ReactNode } from "react";
-import { useTheme } from "app/providers/ThemeProvider";
-import { classNames, Mods } from "shared/lib/classNames/classNames";
-import { Portal } from "../Portal/Portal";
-import { Overlay } from "../Overlay/Overlay";
-import cls from "./Drawer.module.scss";
-import {useModal} from "shared/lib/hooks/useModal/useModal";
+import { memo, ReactNode } from 'react';
+import { useTheme } from 'app/providers/ThemeProvider';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import { Portal } from '../Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
+import cls from './Drawer.module.scss';
 
 interface DrawerProps {
     className?: string;
@@ -25,12 +25,12 @@ export const Drawer = memo((props: DrawerProps) => {
     const {
         close,
         isMounted,
-        isClosing
+        isClosing,
     } = useModal({
         animationDelay: 300,
         onClose,
-        isOpen
-    })
+        isOpen,
+    });
     const { theme } = useTheme();
     const mods: Mods = {
         [cls.opened]: isOpen,
@@ -49,5 +49,5 @@ export const Drawer = memo((props: DrawerProps) => {
                 </div>
             </div>
         </Portal>
-    )
-})
+    );
+});
