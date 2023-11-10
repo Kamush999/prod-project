@@ -15,7 +15,7 @@ import {
 } from '../../ui/ArticleInfiniteList/ArticleInfiniteList';
 import {
     ArticlesPageFilters,
-} from '../../ui/ArticlesPageFilters/ArticlesPageFilters';
+} from '../ArticlesPageFilters/ArticlesPageFilters';
 import {
     fetchNextArticlesPage,
 } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';

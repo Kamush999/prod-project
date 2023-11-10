@@ -1,11 +1,10 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { memo, useMemo } from 'react';
-import { SelectOptions } from 'shared/ui/Select/Select';
-import { SortOrder } from 'shared/types';
-import { ListBox } from 'shared/ui/Popups/ui/ListBox/ListBox';
-import { ArticleSortFieldTypes } from '../../model/types/article';
-import { ArticleSortField } from '../../model/consts/consts';
+import {classNames} from 'shared/lib/classNames/classNames';
+import {useTranslation} from 'react-i18next';
+import {memo, useMemo} from 'react';
+import {Select, SelectOptions} from 'shared/ui/Select/Select';
+import {SortOrder} from 'shared/types';
+import {ArticleSortFieldTypes} from '../../model/types/article';
+import {ArticleSortField} from '../../model/consts/consts';
 import cls from './ArticleSortSelector.module.scss';
 
 interface ArticleSortSelectorProps {
@@ -56,45 +55,45 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
 
     return (
         <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
-            <ListBox
-                placeholder={t('Сортировать по')}
-                onChange={(value) => {
-                    // Преобразовать value в тип ArticleSortFieldTypes
-                    const newOrder: SortOrder = value as SortOrder;
-                    onChangeOrder(newOrder);
-                }}
-                value={order}
-                items={orderOptions}
-                defaultValue={ArticleSortField.CREATED}
-                className={classNames('', {}, [className])}
-                direction="bottom left"
-            />
-            <ListBox
-                placeholder={t('по')}
-                onChange={(value) => {
-                    // Преобразовать value в тип ArticleSortFieldTypes
-                    const newSort: ArticleSortFieldTypes = value as ArticleSortFieldTypes;
-                    onChangeSort(newSort);
-                }}
-                value={sort}
-                items={sortFieldOptions}
-                defaultValue="asc"
-                className={classNames(cls.order, {}, [className])}
-                direction="bottom left"
-            />
-            {/* <Select */}
-            {/*     options={sortFieldOptions} */}
-            {/*     label={t('Сортировать по')} */}
-            {/*     value={sort} */}
-            {/*     onChange={onChangeSort} */}
-            {/* /> */}
-            {/* <Select */}
-            {/*     options={orderOptions} */}
-            {/*     label={t('по')} */}
-            {/*     value={order} */}
-            {/*     onChange={onChangeOrder} */}
-            {/*     className={cls.order} */}
-            {/* /> */}
+            {/*<ListBox*/}
+            {/*    placeholder={t('Сортировать по')}*/}
+            {/*    onChange={(value) => {*/}
+            {/*        // Преобразовать value в тип ArticleSortFieldTypes*/}
+            {/*        const newOrder: SortOrder = value as SortOrder;*/}
+            {/*        onChangeOrder(newOrder);*/}
+            {/*    }}*/}
+            {/*    value={order}*/}
+            {/*    items={orderOptions}*/}
+            {/*    defaultValue={ArticleSortField.CREATED}*/}
+            {/*    className={classNames('', {}, [className])}*/}
+            {/*    direction="bottom right"*/}
+            {/*/>*/}
+            {/*<ListBox*/}
+            {/*    placeholder={t('по')}*/}
+            {/*    onChange={(value) => {*/}
+            {/*        // Преобразовать value в тип ArticleSortFieldTypes*/}
+            {/*        const newSort: ArticleSortFieldTypes = value as ArticleSortFieldTypes;*/}
+            {/*        onChangeSort(newSort);*/}
+            {/*    }}*/}
+            {/*    value={sort}*/}
+            {/*    items={sortFieldOptions}*/}
+            {/*    defaultValue="asc"*/}
+            {/*    className={classNames(cls.order, {}, [className])}*/}
+            {/*    direction="bottom right"*/}
+            {/*/>*/}
+             <Select
+                 options={sortFieldOptions}
+                 label={t('Сортировать по')}
+                 value={sort}
+                 onChange={onChangeSort}
+             />
+             <Select
+                 options={orderOptions}
+                 label={t('по')}
+                 value={order}
+                 onChange={onChangeOrder}
+                 className={cls.order}
+             />
         </div>
     );
 });

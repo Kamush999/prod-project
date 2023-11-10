@@ -9,12 +9,16 @@
     display: flex;
     transition: transform 0.1s, width 0.1s, background 0.1s;
     transform: translateX(0);
+    z-index: 100;
 }
 
 .collapseBtn {
     position: absolute;
+    width: 40px !important;
+    height: 45px !important;
     right: -40px;
-    bottom: 50%;
+    bottom: 60%;
+    z-index: 100;
 }
 
 .switchers {
