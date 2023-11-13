@@ -89,7 +89,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     <Text text={article.createdAt} className={cls.date} />
                 </div>
                 <div className={cls.infoWrapper}>
-                    {types}
                     {views}
                 </div>
                 <Text text={article.title} className={cls.title} />

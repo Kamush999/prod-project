@@ -1,4 +1,9 @@
 .BIG {
+
+    .card {
+        padding: 15px;
+    }
+
     .views {
         margin-left: auto;
     }
@@ -40,9 +45,13 @@
 }
 
 .SMALL {
-    width: 230px;
+    width: 200px;
     transition: 0.2s;
     cursor: pointer;
+
+    .cardSkel {
+        width: 200px;
+    }
 
     .date {
         position: absolute;
@@ -70,29 +79,38 @@
         width: 200px;
         height: 165px;
         object-fit: cover;
+        border-radius: 12px 12px 0 0;
     }
 
     .infoWrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin-top: 2px;
-        width: 200px;
+        margin-right: 15px;
     }
 
-    .types p {
-        width: 80px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .infoWrapperSkel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 12px;
     }
 
-    .views {
-        width: 100px;
-        margin-right: auto;
-    }
+    //.types p {
+    //    white-space: nowrap;
+    //    overflow: hidden;
+    //    text-overflow: ellipsis;
+    //    margin: 0;
+    //    padding: 0;
+    //}
 
     .title {
         margin-top: 5px;
+    }
+
+    .titleSkel {
+        margin: 15px;
     }
 
     .title p {
