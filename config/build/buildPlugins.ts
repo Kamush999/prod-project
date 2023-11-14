@@ -5,6 +5,8 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import path from 'path';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({
@@ -13,8 +15,8 @@ export function buildPlugins({
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
+            favicon: path.resolve(paths.build, 'favicon.ico'),
         }),
-        new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
@@ -37,6 +39,8 @@ export function buildPlugins({
 
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin());
+        plugins.push(new ForkTsCheckerWebpackPlugin());
+        plugins.push(new webpack.ProgressPlugin());
         plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,

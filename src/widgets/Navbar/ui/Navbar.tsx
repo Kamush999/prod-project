@@ -36,7 +36,7 @@ export const Navbar = memo((props: NavbarProps) => {
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text
                     className={cls.appName}
-                    title={t('KamushApp')}
+                    title={t('{ Syntax }')}
                     theme={TextTheme.PRIMARY}
                 />
                 <AppLink
