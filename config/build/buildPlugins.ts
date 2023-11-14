@@ -15,7 +15,7 @@ export function buildPlugins({
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
-            favicon: path.resolve(paths.build, 'favicon.ico'),
+            favicon: paths.fav,
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
