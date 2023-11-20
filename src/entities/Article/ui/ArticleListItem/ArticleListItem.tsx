@@ -9,6 +9,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { getRouteArticleDetail } from 'shared/const/router';
+import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
 import {
     ArticleTextBlockComponent,
 } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
@@ -35,7 +36,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         className,
         target,
     } = props;
-
+    const isMobile = useDevice();
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
     const views = (
         <>
@@ -43,6 +44,28 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             <Icon Svg={EyeIcon} />
         </>
     );
+
+    if (isMobile) {
+        return (
+            <AppLink
+                target={target}
+                to={getRouteArticleDetail(article.id)}
+                className={classNames(cls.ArticleListItemMobile, {}, [className, cls[view]])}
+            >
+                <Card className={cls.cardMobile}>
+                    <div className={cls.imageWrapper}>
+                        <img alt={article.title} src={article.img} className={cls.imgMobile} />
+                        <Text text={article.createdAt} className={cls.dateMobile} />
+                    </div>
+                    <div className={cls.infoWrapperMobile}>
+                        {views}
+                    </div>
+                    <Text text={article.title} className={cls.titleMobile} />
+                </Card>
+            </AppLink>
+        );
+    }
+
     if (view === ArticleView.BIG) {
         const textBlock = article.blocks.find(
             (block) => block.type === ArticleBlockTypes.TEXT,

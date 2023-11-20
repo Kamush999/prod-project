@@ -11,6 +11,7 @@ import { getRouteArticleNew } from 'shared/const/router';
 import { HStack } from 'shared/ui/Stack';
 import { NotificationButton } from 'features/notificationButton';
 import { AvatarDropdown } from 'features/avatarDropdown';
+import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -23,6 +24,7 @@ export const Navbar = memo((props: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
+    const isMobile = useDevice();
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -32,6 +34,21 @@ export const Navbar = memo((props: NavbarProps) => {
     }, []);
 
     if (authData) {
+        if (isMobile) {
+            return (
+                <header className={classNames(cls.Navbar, {}, [className])}>
+                    <Text
+                        className={cls.appName}
+                        title={t('{ Syntax }')}
+                        theme={TextTheme.PRIMARY}
+                    />
+                    <HStack gap="16" className={cls.actions}>
+                        <NotificationButton />
+                        <AvatarDropdown />
+                    </HStack>
+                </header>
+            );
+        }
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text

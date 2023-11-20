@@ -12,6 +12,8 @@ import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { ArticleTypeTabs } from 'features/ArticleTypeTabs';
+import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
+import { Text } from 'shared/ui/Text/Text';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 import {
@@ -39,6 +41,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     const order = useSelector(getArticlesPageOrder);
     const search = useSelector(getArticlesPageSearch);
     const type = useSelector(getArticlesPageType);
+    const isMobile = useDevice();
     const fetchData = useCallback(() => {
         dispatch(fetchArticlesList({ replace: true }));
     }, [dispatch]);
@@ -72,6 +75,34 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
         dispatch(articlesPageActions.setPage(1));
         debouncedFetchData();
     }, [dispatch, debouncedFetchData]);
+
+    if (isMobile) {
+        // todo переместить мобильные фильтры в отдельный сайдбар справа
+        return (
+            <div className={classNames(cls.ArticlesPageFiltersMobile, {}, [className])}>
+                <Text text={t('Сортировать')} />
+                <ArticleSortSelector
+                    className={cls.sortWrapperMobile}
+                    order={order}
+                    sort={sort}
+                    onChangeOrder={onChangeOrder}
+                    onChangeSort={onChangeSort}
+                />
+                <Card className={cls.searchMobile}>
+                    <Input
+                        placeholder={t('Поиск')}
+                        onChange={onChangeSearch}
+                        value={search}
+                    />
+                </Card>
+                <ArticleTypeTabs
+                    className={cls.tabsMobile}
+                    value={type}
+                    onChangeType={onChangeType}
+                />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>

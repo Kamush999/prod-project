@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher/ThemeSwitcher';
 import { VStack } from 'shared/ui/Stack/VStack/VStack';
+import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
 import {
     getSidebarItems,
 } from '../../model/selectors/getSidebarItems';

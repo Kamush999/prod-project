@@ -11,6 +11,7 @@ import { CurrencySelect } from 'entities/Currency';
 import { Country } from 'entities/Country/model/types/country';
 import { CountrySelect } from 'entities/Country';
 import { HStack, VStack } from 'shared/ui/Stack';
+import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
@@ -46,6 +47,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeAvatar,
         onChangeUsername,
     } = props;
+    const isMobile = useDevice();
     const { t } = useTranslation('profile');
 
     if (isLoading) {
@@ -72,7 +74,81 @@ export const ProfileCard = (props: ProfileCardProps) => {
     const mods: Mods = {
         [cls.editing]: !readonly,
     };
+    if (isMobile) {
+        return (
+            <VStack gap="8" max className={classNames(cls.ProfileCardMobile, mods, [className])}>
+                {data?.avatar && (
+                    <HStack justify="center" max className={cls.avatarWrapper}>
+                        <Avatar
+                            size={200}
+                            src={data?.avatar}
+                        />
+                    </HStack>
+                )}
+                <Input
+                    value={data?.first}
+                    placeholder={t('Ваше имя')}
+                    className={cls.inputMobile}
+                    onChange={onChangeFirstname}
+                    readonly={readonly}
+                    data-testid="ProfileCard.Firstname"
+                />
+                <Input
+                    value={data?.lastname}
+                    placeholder={t('Ваша фамилия')}
+                    className={cls.inputMobile}
+                    onChange={onChangeLastname}
+                    readonly={readonly}
+                    data-testid="ProfileCard.Lastname"
+                />
+                <Input
+                    value={data?.username}
+                    placeholder={t('Имя пользователя')}
+                    className={cls.inputMobile}
+                    onChange={onChangeUsername}
+                    readonly={readonly}
+                    data-testid="ProfileCard.Username"
+                />
+                <Input
+                    value={data?.age}
+                    placeholder={t('Ваш возраст')}
+                    className={cls.inputMobile}
+                    onChange={onChangeAge}
+                    readonly={readonly}
+                    data-testid="ProfileCard.Age"
+                />
+                <CountrySelect
+                    value={data?.country}
+                    onChange={onChangeCountry}
+                    readonly={readonly}
+                    className={cls.inputMobile}
+                />
+                <Input
+                    value={data?.city}
+                    placeholder={t('Ваш город')}
+                    className={cls.inputMobile}
+                    onChange={onChangeCity}
+                    readonly={readonly}
+                    data-testid="ProfileCard.City"
+                />
 
+                <CurrencySelect
+                    className={cls.inputMobile}
+                    value={data?.currency}
+                    onChange={onChangeCurrency}
+                    readonly={readonly}
+                />
+
+                <Input
+                    value={data?.avatar}
+                    placeholder={t('Ссылка на аватар')}
+                    className={cls.inputMobile}
+                    onChange={onChangeAvatar}
+                    readonly={readonly}
+                />
+            </VStack>
+        );
+    }
     return (
         <VStack gap="8" max className={classNames(cls.ProfileCard, mods, [className])}>
             {data?.avatar && (

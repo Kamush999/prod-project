@@ -13,3 +13,20 @@
     margin-top: 16px;
     width: 1%;
 }
+
+.sortWrapperMobile {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    flex-direction: column;
+}
+
+.searchMobile {
+    padding: 15px;
+    margin-top: 16px;
+}
+
+.tabsMobile {
+    flex-direction: column;
+    margin-top: 16px;
+}

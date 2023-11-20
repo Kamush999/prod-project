@@ -10,3 +10,11 @@
     height: 20px;
     margin: 10px;
 }
+
+.PageMobile {
+    flex-grow: 1;
+    padding: 20px;
+    height: calc(100vh - var(--navbar-height));
+    width: calc(100% - var(--sidebar-width));
+    overflow-y: auto;
+}

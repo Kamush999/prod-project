@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { Card } from 'shared/ui/Card/Card';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
 import { ArticleViewTypes } from '../../model/types/article';
 import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
@@ -16,6 +17,27 @@ export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps
         view,
         className,
     } = props;
+
+    const isMobile = useDevice();
+
+    if (isMobile) {
+        return (
+            <div className={classNames(cls.ArticleListItemMobile, {}, [className, cls[view]])}>
+                <Card className={cls.cardSkelMobile}>
+                    <div className={cls.imageWrapperMobile}>
+                        <Skeleton width="85vw" height={165} className={cls.imgMobile} />
+                    </div>
+                    <div className={cls.infoWrapperSkel}>
+                        <Skeleton width={90} height={24} />
+                        <Skeleton width={24} height={24} />
+                    </div>
+                    <div className={cls.titleSkel}>
+                        <Skeleton width={180} height={24} />
+                    </div>
+                </Card>
+            </div>
+        );
+    }
 
     if (view === ArticleView.BIG) {
         return (

@@ -15,6 +15,7 @@ import { useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 import { TestProps } from 'shared/types/tests';
+import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
 import cls from './Page.module.scss';
 
 interface PageProps extends TestProps {
@@ -29,6 +30,7 @@ export const Page = (props: PageProps) => {
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
     const { pathname } = useLocation();
+    const isMobile = useDevice();
     const scrollPosition = useSelector(
         (state: StateSchema) => getPosScrollByPath(state, pathname),
     );
@@ -48,6 +50,20 @@ export const Page = (props: PageProps) => {
             path: pathname,
         }));
     }, 500);
+
+    if (isMobile) {
+        return (
+            <main
+                id={pageId}
+                ref={wrapperRef}
+                className={classNames(cls.PageMobile, {}, [className])}
+                onScroll={onScroll}
+            >
+                {children}
+                {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
+            </main>
+        );
+    }
 
     return (
         <main

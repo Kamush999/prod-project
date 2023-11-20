@@ -12,3 +12,24 @@
     margin-top: 0;
     margin-left: auto;
 }
+
+.LoginFormMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loginBtnMobile {
+    margin-top: 10px;
+}
+
+.inputMobile {
+    margin-top: 8px;
+}
+
+.formText {
+    margin: 4px 0 0;
+    padding: 0;
+}

@@ -1,3 +1,60 @@
+.ArticleListItemMobile {
+    width: 85vw;
+    height: 260px;
+    transition: 0.1s;
+}
+
+.cardMobile {
+    width: 85vw;
+    height: 260px;
+    transition: 0.1s;
+}
+
+.cardSkelMobile {
+    width: 85vw;
+}
+
+.imageWrapperMobile {
+    width: 85vw;
+    height: 165px;
+    transition: 0.1s;
+    position: relative;
+}
+
+.imgMobile {
+    transition: 0.1s;
+    width: 85vw;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.dateMobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
+.infoWrapperMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px;
+    margin-right: 15px;
+}
+
+.titleMobile {
+    margin-top: 5px;
+}
+
+.titleMobile p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .BIG {
     .card {
         padding: 15px;
