@@ -1,10 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getUserAuthData } from 'entities/User';
-import { ThunkConfig } from 'app/providers/StoreProvider/config/StateSchema';
-import { Comment } from 'entities/Comment';
+import { getUserAuthData } from '@/entities/User';
+import { ThunkConfig } from '@/app/providers/StoreProvider/config/StateSchema';
+import { Comment } from '@/entities/Comment';
 import {
     getArticleDetailsData,
-} from 'entities/Article/model/selectors/articleDetails/articleDetails';
+} from '@/entities/Article/model/selectors/articleDetails/articleDetails';
 import {
     fetchCommentsByArticleId,
 } from '../../services/fetchCommentsByArticleId/fetchCommentsByArticleId';

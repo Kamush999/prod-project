@@ -1,10 +1,10 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useMemo } from 'react';
-import { Select, SelectOptions } from 'shared/ui/Select/Select';
-import { SortOrder } from 'shared/types';
-import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
-import { VStack } from 'shared/ui/Stack';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Select, SelectOptions } from '@/shared/ui/Select/Select';
+import { SortOrder } from '@/shared/types';
+import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
+import { VStack } from '@/shared/ui/Stack';
 import { ArticleSortFieldTypes } from '../../model/types/article';
 import { ArticleSortField } from '../../model/consts/consts';
 import cls from './ArticleSortSelector.module.scss';

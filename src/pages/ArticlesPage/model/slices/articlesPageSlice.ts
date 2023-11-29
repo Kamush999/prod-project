@@ -11,10 +11,10 @@ import {
     ArticleViewTypes,
     ArticleSortFieldTypes,
     ArticleTypesType,
-} from 'entities/Article';
-import { StateSchema } from 'app/providers/StoreProvider';
-import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
-import { SortOrder } from 'shared/types';
+} from '@/entities/Article';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localStorage';
+import { SortOrder } from '@/shared/types';
 import { ArticlePageSchema } from '../types/articlePageSchema';
 import {
     fetchArticlesList,

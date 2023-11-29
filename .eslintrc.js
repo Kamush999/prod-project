@@ -60,7 +60,7 @@ module.exports = {
                     'align',
                     'direction',
                     'gap',
-                    'border'
+                    'border',
                 ],
             },
         ],

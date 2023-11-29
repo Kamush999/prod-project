@@ -1,27 +1,27 @@
 import {
-    classNames,
-} from 'shared/lib/classNames/classNames';
-import {
     useTranslation,
 } from 'react-i18next';
 import {
     memo,
 } from 'react';
 import {
-    ArticleDetails,
-} from 'entities/Article';
-import {
     useParams,
 } from 'react-router-dom';
 import {
+    ArticleDetails,
+} from '@/entities/Article';
+import {
+    classNames,
+} from '@/shared/lib/classNames/classNames';
+import {
     DynamicModuleLoader,
     ReducersList,
-} from 'shared/lib/components/DynamicsModuleLoader/DynamicModuleLoader';
+} from '@/shared/lib/components/DynamicsModuleLoader/DynamicModuleLoader';
 import {
     Page,
-} from 'widgets/Page/Page';
-import { VStack } from 'shared/ui/Stack';
-import { ArticleRecommendationList } from 'features/ArticleRecommendationList';
+} from '@/widgets/Page/Page';
+import { VStack } from '@/shared/ui/Stack';
+import { ArticleRecommendationList } from '@/features/ArticleRecommendationList';
 import {
     ArticleDetailsComments,
 } from '../../ui/ArticleDetailsComments/ArticleDetailsComments';

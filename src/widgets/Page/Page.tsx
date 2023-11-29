@@ -1,21 +1,17 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import {
-    MutableRefObject, ReactNode, useRef, UIEvent,
+    MutableRefObject, ReactNode, UIEvent, useRef,
 } from 'react';
-import {
-    useInfiniteScroll,
-} from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getPosScrollByPath, scrollSaveActions } from 'features/ScrollSave';
 import { useLocation } from 'react-router-dom';
-import {
-    useInitialEffect,
-} from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
-import { StateSchema } from 'app/providers/StoreProvider';
-import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
-import { TestProps } from 'shared/types/tests';
-import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { getPosScrollByPath, scrollSaveActions } from '@/features/ScrollSave';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
+import { TestProps } from '@/shared/types/tests';
+import { useDevice } from '@/shared/lib/hooks/useDevice/useDevice';
 import cls from './Page.module.scss';
 
 interface PageProps extends TestProps {
@@ -23,6 +19,7 @@ interface PageProps extends TestProps {
     children: ReactNode;
     onScrollEnd?: () => void;
 }
+
 export const pageId = 'PAGE_ID';
 export const Page = (props: PageProps) => {
     const { className, children, onScrollEnd } = props;

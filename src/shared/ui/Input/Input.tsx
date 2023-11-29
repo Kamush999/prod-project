@@ -1,10 +1,11 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
+
 interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string | number;
@@ -12,6 +13,7 @@ interface InputProps extends HTMLInputProps {
     autofocus?: boolean;
     readonly?: boolean;
 }
+
 export const Input = memo((props: InputProps) => {
     const {
         className,

@@ -1,9 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleView } from '../../model/consts/consts';
-import {
-    ArticleListItemSkeleton,
-} from '../../ui/ArticleListItem/ArticleListItemSkeleton';
+import { ArticleListItemSkeleton } from '../../ui/ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { Article, ArticleViewTypes } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
@@ -15,6 +13,7 @@ interface ArticleListProps {
     view?: ArticleViewTypes;
     target?: HTMLAttributeAnchorTarget;
 }
+
 const getSkeletons = (view: ArticleViewTypes) => new Array(view === ArticleView.SMALL ? 15 : 3)
     .fill(0)
     .map((item, index) => (
