@@ -1063,22 +1063,25 @@
       "avatar": "https://i.pinimg.com/736x/db/6f/0e/db6f0ef17e4e91005cb6e31581419d1e.jpg"
     },
     {
-      "id": "2",
-      "username": "rinka",
-      "password": "12345",
-      "roles": [
-        "MANAGER"
-      ],
-      "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
+      "id": "95fa98d5-4970-43f2-afc8-1822911900c3",
+      "username": "admin2",
+      "password": "admin2",
+      "avatar": "",
+      "roles": "ADMIN"
     },
     {
-      "id": "3",
-      "username": "alexpat",
-      "password": "12345",
-      "roles": [
-        "USER"
-      ],
-      "avatar": "https://i.pinimg.com/564x/87/69/bd/8769bdc37e86759908b5a50b86fa5929.jpg"
+      "id": "db660c79-a30e-4ff2-aed9-37e8cd8c2548",
+      "username": "manager",
+      "password": "manager",
+      "avatar": "",
+      "roles": "MANAGER"
+    },
+    {
+      "id": "f4c3fdeb-5647-4edc-a40b-631551d3fcbe",
+      "username": "user1",
+      "password": "user1",
+      "avatar": "",
+      "roles": "USER"
     }
   ],
   "profile": [
@@ -1094,26 +1097,25 @@
       "avatar": "https://i.pinimg.com/736x/db/6f/0e/db6f0ef17e4e91005cb6e31581419d1e.jpg"
     },
     {
-      "id": "2",
-      "first": "Ринка",
-      "lastname": "Шикима",
-      "age": 18,
-      "currency": "KZT",
-      "country": "Kazakhstan",
-      "city": "Almaty",
-      "username": "rinka",
-      "avatar": "https://cdn.shopify.com/s/files/1/0428/0465/files/logo1.jpg?v=1656089898"
+      "id": "95fa98d5-4970-43f2-afc8-1822911900c3",
+      "first": "admin2",
+      "lastname": "admin2",
+      "username": "admin2",
+      "avatar": ""
     },
     {
-      "id": "3",
-      "first": "Alex",
-      "lastname": "Wizard",
-      "age": 45,
-      "currency": "KZT",
-      "country": "Kazakhstan",
-      "city": "Almaty",
-      "username": "alexpat",
-      "avatar": "https://i.pinimg.com/564x/87/69/bd/8769bdc37e86759908b5a50b86fa5929.jpg"
+      "id": "db660c79-a30e-4ff2-aed9-37e8cd8c2548",
+      "first": "manager",
+      "lastname": "manager",
+      "username": "manager",
+      "avatar": ""
+    },
+    {
+      "id": "f4c3fdeb-5647-4edc-a40b-631551d3fcbe",
+      "first": "user1",
+      "lastname": "user1",
+      "username": "user1",
+      "avatar": ""
     }
   ]
 }
