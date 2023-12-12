@@ -74,7 +74,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                         theme={TextTheme.PRIMARY}
                     />
                     <Input
-                        type="text"
+                        type="password"
                         className={cls.inputMobile}
                         placeholder={' '}
                         onChange={onChangePassword}

@@ -38,7 +38,7 @@ export const newUserRegister = createAsyncThunk<
                 username: userAuthData.username,
                 avatar: userAuthData.avatar,
             });
-            if (!response.data) {
+            if (!response.data || !responseProfileData.data) {
                 throw new Error();
             }
             return response.data;

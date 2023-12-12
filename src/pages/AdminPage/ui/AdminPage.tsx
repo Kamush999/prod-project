@@ -5,6 +5,7 @@ import { RegisterForm } from '@/features/registerNewUser';
 import { newUserRegister } from '@/features/registerNewUser/model/services/newUserRegister';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
+import { UserList } from '@/entities/User/ui/UserList/UserList';
 
 const AdminPage = () => {
     const { t } = useTranslation('admin-page');
@@ -22,6 +23,12 @@ const AdminPage = () => {
                 size={TextSize.L}
             />
             <RegisterForm onNewUser={onNewUserSet} />
+            <Text
+                align={TextAlign.CENTER}
+                title={t('Список пользователей')}
+                size={TextSize.L}
+            />
+            <UserList />
         </Page>
     );
 };

@@ -17,3 +17,4 @@ export type {
     User,
 } from './model/types/user';
 export { UserRole } from './model/consts/consts';
+export { UserCard } from './ui/UserCard/UserCard';

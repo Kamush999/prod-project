@@ -5,7 +5,6 @@ import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { getRouteProfile } from '@/shared/const/router';
 import { VStack } from '@/shared/ui/Stack';
-// eslint-disable-next-line ilya-plugin/path-checker
 import { Comment } from '@/entities/Comment';
 import cls from './CommentCard.module.scss';
 
@@ -14,6 +13,7 @@ interface CommentCardProps {
     comment: Comment;
     isLoading?: boolean;
 }
+
 export const CommentCard = (props: CommentCardProps) => {
     const { className, comment, isLoading } = props;
     if (isLoading) {

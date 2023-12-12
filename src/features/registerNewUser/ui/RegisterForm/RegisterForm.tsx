@@ -15,7 +15,7 @@ import {
     getRegisterPassword,
     getRegisterRoles,
     getRegisterUsername,
-} from '@/features/registerNewUser/model/selectors/getRegisterUsername/getRegisterData';
+} from '@/features/registerNewUser/model/selectors/getRegisterData/getRegisterData';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from '@/features/registerNewUser/ui/RegisterForm/RegisterForm.module.scss';
 import { Text, TextSize } from '@/shared/ui/Text/Text';
@@ -76,6 +76,7 @@ const RegisterForm = memo((props: RegisterFormProps) => {
                     value={password}
                     onChange={onPasswordSet}
                     placeholder={t('Пароль')}
+                    type="password"
                 />
                 <Input
                     className={cls.input}
